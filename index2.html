@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<title>Techno Mart</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/style_mobile.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Cuprum:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+	<section class="section_header">
+		<header class="header">
+			<div class="header_wrapper_first_line">
+				<div class="header_first_line container">
+					<div class="first_line_container">
+						<div class="logo">техномарт</div>
+						<div class="header_toggle" onclick="menuActive()"><span></span></div>
+						<form action="" method="get">
+							<div id="searchform">
+								<input class="search_btn" type="submit" value="">
+								<input class="search" type="text" placeholder="Поиск:">
+
+							</div>
+						</form>
+						<div>
+							<ul class="header_link">
+								<li class="icon_bookmark"><a href="#">Закладки: 0</a></li>
+								<li class="cart_icon"><a href="#">Корзина: 0</a></li>
+								<li class="header_order"><a href="#">Оформить заказ</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="header_container">
+				<div class="header_second_line container">
+					<div>
+						<p class="second_line_text">Интернет-магазин строительных материалов и инструментов для
+							ремонта
+						</p>
+					</div>
+					<div class="all_second_line">
+						<p class="second_line_tel">+7 (812) 555-05-55</p>
+						<p class="second_line_address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+					</div>
+					<div class="second_line_btns">
+						<a class="button_second_line button_log_in" href="#">Войти</a>
+						<a class="button_second_line" href="#">Регистрация</a>
+					</div>
+				</div>
+
+				<nav class="header_navigation">
+					<ul class="header_navigation_item container">
+						<li class="focus header_navigation_item_link"><a href="#">Главная</a></li>
+						<li class="header_navigation_item_link"><a href="#">Компания</a></li>
+						<li class="header_navigation_catalog header_navigation_item_link"><a href="#">Каталог</a>
+							<ul class="header_navigation_dropdown">
+								<li class="header_navigation_dropdown_instrument"><img src="img/png/drill.png"
+										width="30" height="30"><a href="#">Электроинструмент</a>
+									<ul class="header_navigation_dropdown_electro_instrument">
+										<li><a href="index2.html">Перфораторы</a></li>
+										<li><a href="#">Дрели</a></li>
+										<li><a href="#">Лобзики</a></li>
+									</ul>
+								</li>
+								<li><img src="img/png/electro_instrument.png" width="30" height="30"><a
+										href="#">Бензоинструмент</a></li>
+								<li><img src="img/png/garden.png" width="30" height="30"><a href="#">Садовая техника и
+										инструмент</a></li>
+								<li><img src="img/png/warm.png" width="30" height="30"><a href="#">Теплотехника</a></li>
+								<li><img src="img/png/hand.png" width="30" height="30"><a href="#">Ручной инструмент</a>
+								</li>
+								<li><img src="img/png/bild.png" width="30" height="30"><a href="#">Строительное
+										оборудование</a></li>
+										
+							</ul>
+						</li>
+						<li class="header_navigation_item_link"><a href="#">Новости</a></li>
+						<li class="header_navigation_item_link"><a href="#">Спецпредложения</a></li>
+						<li class="header_navigation_item_link"><a href="#">Доставка</a></li>
+						<li class="header_navigation_item_link"><a href="#">Контакты</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+	</section>
+	<main class="container">
+		<div>
+			<ul class="breadcrumbs">
+				<!-- СПРОСИТЬ -->
+				<li><a class="main_breabcrumb" href="#"><span class="hidden">main</span></a></li>
+				<li><a href="#">Каталог</a></li>
+				<li><a href="#">Инструмент</a></li>
+				<li><a href="#">Перфораторы</a></li>
+			</ul>
+		</div>
+		<div class="section_perforator">
+			<h2>Перфораторы</h2>
+		</div>
+
+		<section>
+			<div class="wrapper_goods">
+				<div class="box_filter">
+					<div class="box_filter_paragraph">
+						<p>Фильтр:</p>
+					</div>
+					<div class="box_cost_range">
+						<p>Цена:</p>
+						<input type="range" min="12" max="2175" value="12" class="slider" id="lower">
+						<input type="range" min="12" max="2175" value="2175" class="slider" id="higher">
+					</div>
+					<div class="choose_items choose_items_manufacterer">
+						<form action="#">
+							<h3>Производители</h3>
+							<label>
+								<p><input class="manufacturer" name="Bosch"
+										type="checkbox" value="Bosch">Bosch</p>
+							</label>
+							<label>
+								<p><input class="manufacturer" name="Интерскол"
+										type="checkbox" value="Интерскол">Интерскол</p>
+							</label>
+							<label>
+								<p><input  class="manufacturer" name="Makita"
+										type="checkbox" value="Makita">Makita</p>
+							</label>
+							<label>
+								<p><input class="manufacturer" name="DeWALT"
+										type="checkbox" value="DeWALT">DeWALT</p>
+							</label>
+							<label>
+								<p><input class="manufacturer" name="Hitachi"
+										type="checkbox" value="Hitachi">Hitachi
+								</p>
+							</label>
+							<button onclick="pushElements()" type="button" class="click">Показать</button>
+						</form>
+						<!-- <hr style="margin-top: 10px;"> -->
+					</div>
+					<div class="choose_items">
+						<form action="#">
+							<h3>Тип питания</h3>
+							<label>
+								<p><input class="conection" name="Аккумуляторные" type="checkbox" value="Аккумуляторные">Аккумуляторные
+								</p>
+							</label>
+							<label>
+								<p><input class="conection" name="Сетевые" type="checkbox" value="Сетевые">Сетевые</p>
+							</label>
+							<button onclick="pushElementsConect()" type="button" class="click">Показать</button>
+						</form>
+					</div>
+
+
+
+				</div>
+				<div class="box_sorting_goods">
+					<p>Сортировка:</p>
+					<div class="btn_sort">
+						<div class="btn_sort_cost">
+							<button class="button_sort">По цене</button>
+							<div class="choose_sort_btn">
+								<button id="btn_up">По возрастанию</button>
+								<button id="btn_down"> По убыванию</button>
+							</div>
+						</div>
+
+						<div><button>По типу</button></div>
+						<div><button>По функционалу</button></div>
+					</div>
+				</div>
+
+
+				<div class="box_filter_sort_for_tel">
+					<div class="box_filter_button">
+						<button class="filter_btn"
+							onclick="openForm(document.querySelector('.box_filter_dropdown_content'))">Фильтр:</button>
+						<div class="box_filter_dropdown_content">
+
+							<h3>Производители</h3>
+							<label>
+								<p><input name="Bosch" type="checkbox" value="Bosch">Bosch</p>
+							</label>
+							<label>
+								<p><input name="Интерскол" type="checkbox" value="Интерскол"> Интерскол</p>
+							</label>
+							<label>
+								<p><input name="Makita" type="checkbox" value="Makita"> Makita</p>
+							</label>
+							<label>
+								<p><input name="DeWALT" type="checkbox" value="DeWALT"> DeWALT</p>
+							</label>
+							<label>
+								<p><input name="Hitachi" type="checkbox" value="Hitachi" checked> Hitachi</p>
+							</label>
+							<button
+								onclick="closeForm(document.querySelector('.box_filter_dropdown_content'))">Показать</button>
+
+						</div>
+					</div>
+
+					<div class="box_sort_button">
+						<button class="filter_btn"
+							onclick="openForm(document.querySelector('.box_sort_dropdown_content'))">Сортировка:</button>
+						<div class="box_sort_dropdown_content">
+							<p>По цене:</p>
+							<label>
+								<p><input name="min" type="checkbox" value="min">По возрастанию</p>
+							</label>
+							<label>
+								<p><input name="max" type="checkbox" value="max"> По убыванию</p>
+							</label>
+							<p>По типу:</p>
+							<p>По функционалу:</p>
+							<button
+								onclick="closeForm(document.querySelector('.box_sort_dropdown_content'))">Показать</button>
+
+						</div>
+					</div>
+				</div>
+
+
+
+				<div class="box_output_goods">
+					<ul class="popular_goods_item box_output_goods_ul"></ul>
+				</div>
+			</div>
+			<div class="page_numbers" id="pagination">
+				<!-- 		<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>Следующая</li> -->
+			</div>
+		</section>
+
+	</main>
+	<section class="box_text_about_instrument">
+		<div class="container">
+			<h2>Пара слов о перфораторах</h2>
+			<p>Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в
+				кирпиче, бетоне и камне.
+				Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции
+				дрели, шуруповерта и отбойного молотка.
+				В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и
+				ударная дрель.
+			</p>
+		</div>
+	</section>
+
+
+	<footer>
+		<div class="footer_wrapper">
+			<div class="first_footer container">
+				<div class="footer_line_one_item">
+					<div class="logo">техномарт</div>
+					<button class="footer_line_one_item_dropbtn button_first">Все о нас
+						<i class="icon_bropdown"></i>
+					</button>
+					<ul class="first_footer_item footer_line_item_show" id="item_show">
+						<li><a href="#">Компания</a></li>
+						<li><a href="#">Новости</a></li>
+						<li><a href="#">Каталог</a></li>
+						<li><a href="#">Доставка</a></li>
+						<li><a href="#">Контакты</a></li>
+					</ul>
+				</div>
+				<div class="footer_line_two">
+					<p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 <br> +7 (812) 555-05-55</p>
+					<button class="footer_line_one_item_dropbtn button_second">Товары
+						<i class="icon_bropdown"></i>
+					</button>
+					<ul class="footer_line_two_item footer_line_item_show" id="item_show_two">
+						<li><a href="#">Материалы</a></li>
+						<li><a href="#">Техника</a></li>
+						<li><a href="#">Инструмент</a></li>
+						<li><a href="#">Спецпредложения</a></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="wrapper_second_footer">
+				<div class="second_footer container">
+					<div class="footer_copyright">
+						<p>© 2010–2019 Компания «Техномарт» Все права защищены</p>
+					</div>
+					<div class="socials">
+						<button class="second_footer_socials social_vk"></button>
+						<button class="second_footer_socials social_fb"></button>
+						<button class="second_footer_socials social_inst"></button>
+					</div>
+					<div class="footer_connection_develop">
+						<div class="footer_connection">
+							<p>Обратная связь: <span class="footer_connection_email">mail@htmlacademy.ru</span></p>
+						</div>
+						<div class="footer_develop">
+							<p>Разработано — <span class="footer_connection_email">htmlacademy.ru</span></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</footer>
+	
+	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+	<script src="js/second.script.js"></script>
+</body>
+
+</html>

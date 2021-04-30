@@ -1,0 +1,298 @@
+@media (max-width: 768px) {
+   /* показываем кнопку для переключения верхней навигации */
+   .header_toggle {
+      display: block;
+   }
+/*ШАПКА ПЕРВАЯ ЛИНИЯ*/
+   .header_link{
+   	  max-height: 0;
+      background: #293449;
+      position: absolute;
+      overflow: hidden;
+      top: 63px;
+      right: 0;
+      margin: 0;
+      padding: 0;
+      z-index: 3;
+   }
+   .header_link li{
+   	display: block;
+   	text-align: center;
+    margin-right: 0;
+   }
+   .cart_icon::after{
+   	top: 64px;
+   }
+
+   /*ШАПКА ВТОРАЯ ЛИНИЯ*/
+	.second_line_text {
+	  width: 285px;
+	}
+	.header_second_line {
+      flex-direction: column;
+   }
+    .second_line_btns{
+    flex-direction: row;
+    margin-top: 20px;
+   }
+   .second_line_btns a{
+   	margin-right: 20px;
+   	font-size: 20px;
+   }
+/*ШАПКА НАВИГАЦИЯ*/
+   .header_navigation_item{
+   	display: block;
+   }
+   .header_navigation_item a{
+   	font-size: 22px;
+   }
+    .header_navigation_item li{
+    	position: relative;
+    }
+   .header_navigation_item li::after{
+   	content: "";
+   	position: absolute;
+    width: 15px;
+    height: 13px;
+    background-image: url(../img/svg/icon-right-small.svg);
+    background-repeat: no-repeat;
+    top: 33px;
+   }
+
+   /*РАЗДЕЛЫ КАТЕГОРИЙ*/
+   .wrapper_item_category{
+   	display: flex;
+   	flex-direction: column;
+   }
+   .item_category_technics,
+   .item_category_materials,
+   .item_category_tool,
+   .item_category_discounts,
+   .item_category_delivery{
+          background-position: 200px 25px;
+   }
+   .wrapper_item_category p{
+    font-size: 30px;
+    text-align: left;
+   }
+   .wrapper_item_category a{
+   	margin: initial;
+   	text-align: center;
+	margin-bottom: 20px;
+   }
+   .item_category_slider a{
+   	bottom: 0px;
+   }
+/*ПОПУЛЯРНЫЕ ТОВАРЫ*/
+	.popular_goods_item li{
+		margin-top: 20px;
+	}
+/*FOOTER*/
+	.footer_line_one_item,
+	.first_footer_item,
+	.footer_line_two,
+	.footer_line_two_item{
+		display: block;
+	}
+	.footer_line_two_item{
+		margin-top: 15px;
+	}
+	.footer_line_one_item a,
+	.footer_line_two_item a{
+		font-size: 24px;
+	}
+	.footer_line_two p{
+		font-size: 21px;
+		width: 343px;
+	}
+	.footer_line_one_item_dropbtn{
+		display: block;
+	}
+	.footer_line_one_item_dropbtn{
+		    background-color: #32425c;
+		    border: none;
+		    outline: none;
+		    color: #fff;
+		    font-size: 24px;
+		    font-family: inherit;
+		    position: relative;
+		    margin-top: 20px;
+	}
+	.icon_bropdown:after{
+		content: "";
+		position: absolute;
+		width: 15px;
+		height: 13px;
+		background-image: url(../img/svg/icon-right-small.svg);
+		background-repeat: no-repeat;
+		top: 8px;
+		left: 100px;
+		transform: rotate(90deg);
+	}
+	.first_footer_item{
+		display: none;
+	}
+	.footer_line_two_item{
+		display: none;
+	}
+	.items_showing{
+		display: block;
+	}
+
+/*SECOND FOOTER*/
+	.second_footer{
+		display: block;
+	}
+/*СЕРВИС И ДОСТАВКА*/
+.section_delivery_block_item{
+	display: block;
+	}
+.section_delivery p{
+	font-size: 20px;
+	}
+.section_delivery_block_delivery{
+	margin-top: 20px;
+	}
+.company_contact_wrapper p{
+	font-size: 20px;
+	}
+.section_delivery_block_img{
+	display: none;
+}
+
+/*КОМПАНИЯ И КОНТАКТЫ*/
+	.box_contact{
+		width: auto;
+		margin-top: 34px;
+	}
+	.company_contact_btn{
+		width: auto;
+	}
+	.box_company_partners a{
+		font-size: 18px;
+	}
+
+/*МОДАЛЬНОЕ ОКНО*/	
+		.modal{
+			width: 400px;
+		}
+		.modal_feedback_form{
+			width: 100%;
+		}
+		.modal_box{
+			width: 100%;
+		}
+}
+@media (max-width: 640px) {
+
+/*МОДАЛЬНОЕ ОКНО*/	
+	.modal{
+    width: 300px;
+    padding: 43px 14px;
+		}
+
+/*СЛАЙДЕР ТОВАРЫ*/
+#slides{
+	position: relative;
+    height: 333px;
+} 
+.slide{
+	position: absolute;
+    width: 100%!important;
+    opacity: 0;
+    z-index: 1;
+    box-sizing: border-box;
+/*    flex: 0 0 50%;
+    max-width: 50%;*/
+}
+.showing {
+    opacity: 1;
+    z-index: 2;
+}
+#back{
+	display: block;
+}
+#next{
+	display: block;
+}
+/*СЛАЙДЕР ПРОИЗВОДИТЕЛИ*/
+.popular_manufacturers_item{
+    position: relative;
+    height: 200px;
+}
+
+
+
+}
+@media (max-width: 480px) {
+/*ПЕРВАЯ ЛИНИЯ*/	
+	.header_link {
+      top: 118px;
+   }
+   #searchform{
+   	display: none;
+   }
+/*ВТОРАЯ ЛИНИЯ*/   
+   .second_line_text{
+   	    font-size: 22px;
+   }
+   .second_line_address {
+   	font-size: 17px!important;
+   }
+   .section_delivery_service{
+   	width: auto;
+   }
+   .map_box iframe{
+	   width: 100%;
+   }
+
+/*СЛАЙДЕР*/
+/*.popular_goods_item li{
+	flex: 0 0 100%;  определяет количество активных слайдов (в данном случае 1 
+    max-width: 100%; /* определяет количество активных слайдов (в данном случае 1 */
+/*}*/
+
+
+/*.header_navigation_item{
+	display: block;
+}*/
+}
+
+
+/*ВТОРАЯ СТРАНИЦА*/
+@media (max-width: 768px) {
+/*ФИЛЬТРАЦИЯ И СОРТИРОВКА ВЫПАДАЮЩИЙ СПИСОК ДЛЯ ТЕЛЕФОНА*/
+	.wrapper_goods{
+		display: block;
+	}
+	.box_filter{
+		display: none;
+	}
+	.box_sorting_goods{
+		display: none;
+	}
+	.box_filter_sort_for_tel{
+		display: flex;
+    	justify-content: space-around;
+    	flex-wrap: wrap;
+	}
+}
+
+
+
+
+@media (max-width: 640px) {
+	.box_output_goods_ul{
+		justify-content: center!important;
+	}
+	.link_goods{
+		width: 100%!important;
+	}
+	.popular_goods_price::after{
+		left: 220px;
+	}
+	.popular_goods_price{
+		width: 200px;
+		margin: 0 auto;
+	}
+}
