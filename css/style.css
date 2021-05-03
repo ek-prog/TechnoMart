@@ -499,9 +499,10 @@ input.search::placeholder{
 
 }
 .dots{
-	position: relative;
-	bottom: 50px;
-	left: 300px;
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
+    width: 100%;
 }
 
 .dot {
