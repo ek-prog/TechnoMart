@@ -12,31 +12,64 @@ function closeForm(el) {
 
 //Слайдер
 
-let slides = document.querySelectorAll('.item_slide');
-let currentSlide = 0; //создали переменную для текущего слайда 
-let slideInterval = setInterval(nextSlide, 3000); // создали интервал для следующего слайда в 3 сек
+// let slides = document.querySelectorAll('.item_slide');
+// let currentSlide = 0; //создали переменную для текущего слайда 
+// let slideInterval = setInterval(nextSlide, 3000); // создали интервал для следующего слайда в 3 сек
 
-function nextSlide() {
-	goToSlide(currentSlide + 1); //вперед
-}
-function previousSlide() {
-	goToSlide(currentSlide - 1); //назад
-}
-function goToSlide(n) {
-	slides[currentSlide].className = 'item_slide';// меняем класс для текущего слайда 
-	currentSlide = (n + slides.length) % slides.length;
-	slides[currentSlide].className = 'item_showing'; //меняем текущему слайду класс на active
+// function nextSlide() {
+// 	goToSlide(currentSlide + 1); //вперед
+// }
+// function previousSlide() {
+// 	goToSlide(currentSlide - 1); //назад
+// }
+// function goToSlide(n) {
+// 	slides[currentSlide].className = 'item_slide';// меняем класс для текущего слайда 
+// 	currentSlide = (n + slides.length) % slides.length;
+// 	slides[currentSlide].className = 'item_showing'; //меняем текущему слайду класс на active
 
-}
-let nextBtn = document.getElementById('next_btn');
-let previousBtn = document.getElementById('previous_btn');
+// }
+// let nextBtn = document.getElementById('next_btn');
+// let previousBtn = document.getElementById('previous_btn');
 
-nextBtn.onclick = function () {
-	nextSlide();
-};
-previousBtn.onclick = function () {
-	previousSlide();
-};
+// nextBtn.onclick = function () {
+// 	nextSlide();
+// };
+// previousBtn.onclick = function () {
+// 	previousSlide();
+// };
+
+
+let slideIndex = 1;
+showSlides(slideIndex);
+
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+
+function showSlides(n){
+	let i;
+	let slides = document.getElementsByClassName('item_slide');
+	let dots = document.getElementsByClassName('dot');
+	if(n > slides.length){slideIndex = 1}
+	if(n < 1){slideIndex = slides.length}
+	for(i = 0; i < slides.length; i++){
+		slides[i].style.display = 'none';
+	}	
+	for(i = 0; i < dots.length; i++){
+		dots[i].className = dots[i].className.replace(" active", "");
+	}
+	slides[slideIndex-1].style.display = 'block';
+	dots[slideIndex-1].className += " active";
+}
+
+
 
 
 

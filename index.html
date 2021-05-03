@@ -106,7 +106,9 @@
 					<a class="wrapper_item_category_link" href="#">для стройки</a>
 				</div>
 				<div class="item_category_slider">
-					<div class="item_slide item_showing">
+
+
+					<div class="item_slide item_showing fade">
 						<img src="img/png/Layer_catalog.png" alt="Мужчина с дрелью" height="239">
 						<h3>Дрели</h3>
 						<p>Соседям на радость!</p>
@@ -114,7 +116,9 @@
 							каталог</a>
 					</div>
 
-					<div class="item_slide item_slide_text">
+
+
+					<div class="item_slide item_slide_text fade">
 						<img src="https://t3.ftcdn.net/jpg/02/34/34/48/240_F_234344829_U1mx6KWdW5JXnv6usc7vFamlMHTKPbcj.jpg"
 							height="239">
 						<h3 class="item_slide_text">Перфораторы</h3>
@@ -122,7 +126,9 @@
 						<a class="item_category_open all_red_button item_category_position_right" href="#">Открыть
 							каталог</a>
 					</div>
-					<div class="item_slide">
+
+
+					<div class="item_slide fade">
 						<img src="https://t3.ftcdn.net/jpg/03/86/47/52/240_F_386475281_QJrPiHW4o6h9oWAEBCOdLqkyUyytkjb0.jpg"
 							height="239">
 						<h3>Дрели</h3>
@@ -130,11 +136,20 @@
 						<a class="item_category_open all_red_button item_category_position_left" href="#">Открыть
 							каталог</a>
 					</div>
-					<button class="controls btn_slider_next" id="next_btn" type="button"><img
+
+
+					<button class="controls btn_slider_next" id="next_btn" type="button" onclick="plusSlides(-1)"><img
 							src="img/png/slider_btn_right.png"></button>
-					<button class="controls btn_slider_back" id="previous_btn" type="button"><img
+					<button class="controls btn_slider_back" id="previous_btn" type="button" onclick="plusSlides(1)"><img
 							src="img/png/slider_btn_left.png"></button>
 				</div>
+
+							<div class="dots">
+								<span class="dot" onclick="currentSlide(1)"></span>
+								<span class="dot" onclick="currentSlide(2)"></span>
+								<span class="dot" onclick="currentSlide(3)"></span>
+							</div>
+
 				<div class="item_category_discounts">
 					<p>Скидки 50%</p>
 					<a class="wrapper_item_category_link" href="#">на 350 товаров</a>
