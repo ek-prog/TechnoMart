@@ -199,22 +199,21 @@
 .slide{
 	position: absolute;
     width: 100%!important;
-    opacity: 0;
-    z-index: 1;
+/*    opacity: 0;
+    z-index: 1;*/
     box-sizing: border-box;
-/*    flex: 0 0 50%;
-    max-width: 50%;*/
+
 }
-.showing {
+/*.showing {
     opacity: 1;
     z-index: 2;
-}
-#back{
+}*/
+/*#back{
 	display: block;
 }
 #next{
 	display: block;
-}
+}*/
 /*СЛАЙДЕР ПРОИЗВОДИТЕЛИ*/
 .popular_manufacturers_item{
     position: relative;

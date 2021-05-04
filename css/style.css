@@ -696,23 +696,35 @@ background-color: #ca2c37;
     padding: 20px 0 20px 0;
 }
 .popular_manufacturers_item{
-	display: flex;
+/*	display: flex;
 	justify-content: space-between;
-	flex-wrap: wrap;
+	flex-wrap: wrap;*/
 }
-.popular_manufacturers_item li{
+.popular_manufacturers_item div{
 	border: 1px solid #eaeaea;
 	width: 220px;
 	height: 145px;
 	margin-top: 20px;
 }
-.popular_manufacturers_item li:hover{
+.popular_manufacturers_item div:hover{
 	box-shadow: 0 10px 25px rgba(41, 52, 73, 0.5);
 }
 .popular_manufacturers_item img{
 	width: auto;
 	margin: 0 auto;
 }
+.slider__wrapper{
+	background-color: #fff!important;
+}
+.slider__indicator_active {
+    background-color: #ee3643!important;
+
+}
+
+
+
+
+
 /*СЕРВИС И ДОСТАВКА*/
 .section_delivery{
 	background-color: #f3f7f8;
@@ -1347,7 +1359,7 @@ ul.breadcrumbs li+li:before {
 	margin-bottom: 60px;
 	margin-top: 30px;
 }
-.slider {
+.slider_cost {
 	-webkit-appearance: none;
 	margin-top: 20px;
 	border-radius: 20px;
@@ -1357,7 +1369,7 @@ ul.breadcrumbs li+li:before {
 	outline: none;
 }
 
-.slider input {
+.slider_cost input {
 	pointer-events: none;
 	position: absolute;
 	overflow: hidden;
@@ -1371,7 +1383,7 @@ ul.breadcrumbs li+li:before {
 
 }
 
-.slider::-webkit-slider-thumb {
+.slider_cost::-webkit-slider-thumb {
 	-webkit-appearance: none;
 	appearance: none;
 	border-radius: 20px;
@@ -1387,7 +1399,7 @@ ul.breadcrumbs li+li:before {
 	outline: 0;
 }
 
-.slider::-moz-range-thumb {
+.slider_cost::-moz-range-thumb {
 	width: 20px;
 	height: 20px;
 	cursor: pointer;
@@ -1398,17 +1410,17 @@ ul.breadcrumbs li+li:before {
 	width: 9px;
 }
 
-.slider input::-moz-range-track {
+.slider_cost input::-moz-range-track {
 	position: relative;
 	z-index: -1;
 	border: 0;
 }
-.slider input:last-of-type::-moz-range-track {
+.slider_cost input:last-of-type::-moz-range-track {
 	-moz-appearance: none;
 	background: none transparent;
 	border: 0;
 
 }
-.slider input[type=range]::-moz-focus-outer {
+.slider_cost input[type=range]::-moz-focus-outer {
 	border: 0;
 }

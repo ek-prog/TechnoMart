@@ -88,17 +88,17 @@ function nextSlideGoods() {
 
 //Слайдер производителей
 
-let slidesManuf = document.querySelectorAll('#slides_manuf .slide');
-let currentSlideManuf = 0;
-let slideIntervalManuf = setInterval(nextSlideManuf, 2200);
+// let slidesManuf = document.querySelectorAll('#slides_manuf .slide');
+// let currentSlideManuf = 0;
+// let slideIntervalManuf = setInterval(nextSlideManuf, 2200);
 
-function nextSlideManuf() {
-	if (document.body.clientWidth < 640) {
-		slidesManuf[currentSlideManuf].className = 'slide';
-		currentSlideManuf = (currentSlideManuf + 1) % slidesManuf.length;
-		slidesManuf[currentSlideManuf].className = 'slide showing'
-	}
-}
+// function nextSlideManuf() {
+// 	if (document.body.clientWidth < 640) {
+// 		slidesManuf[currentSlideManuf].className = 'slide';
+// 		currentSlideManuf = (currentSlideManuf + 1) % slidesManuf.length;
+// 		slidesManuf[currentSlideManuf].className = 'slide showing'
+// 	}
+// }
 
 // let link = document.querySelectorAll('.header_navigation_item li');
 
@@ -134,4 +134,12 @@ document.querySelector('.button_second').onclick = function(){
 // 	}
 // }
 
-
+document.addEventListener('DOMContentLoaded', function () {
+  // инициализация слайдера
+  new SimpleAdaptiveSlider('.slider', {
+    loop: true,
+    autoplay: true,
+    interval: 3000,
+    swipe: true,
+  });
+});
