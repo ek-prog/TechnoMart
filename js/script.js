@@ -134,12 +134,46 @@ document.querySelector('.button_second').onclick = function(){
 // 	}
 // }
 
-document.addEventListener('DOMContentLoaded', function () {
-  // инициализация слайдера
-  new SimpleAdaptiveSlider('.slider', {
-    loop: true,
-    autoplay: true,
-    interval: 3000,
-    swipe: true,
-  });
+// document.addEventListener('DOMContentLoaded', function () {
+//   // инициализация слайдера
+//   new SimpleAdaptiveSlider('.slider', {
+//     loop: true,
+//     autoplay: true,
+//     interval: 3000,
+//     swipe: true,
+//   });
+// });
+$(document).ready(function(){
+	$('.slider').slick({
+		arrows: true,
+		dots: true, 
+		// adaptiveHeight: true,
+		slidesToShow: 4,
+		slidesToScroll: 2,
+		speed: 1000,
+		easing: 'ease',
+		infinite: true,
+		initialSlide: 2,
+		autoplay: true,
+		autoplaySpeed: 2000,
+		draggable: true,
+		swipe: true,
+		touchThreshold:10,
+		touchMove: true,
+		responsive:[
+		{
+			breakpoint: 825,
+			settings: {
+				slidesToShow: 3,
+				slidesToScroll: 1
+			}
+		},{
+			breakpoint: 640,
+			settings: {
+				slidesToShow: 1,
+				slidesToScroll: 1
+			}
+		}
+		]
+	});
 });

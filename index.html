@@ -9,7 +9,7 @@
 	<link rel="stylesheet" type="text/css" href="css/style_mobile.css">
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Cuprum:wght@400;700&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="libs/SimpleAdaptiveSlider/simple-adaptive-slider.min.css">
+<!-- 	<link rel="stylesheet" href="libs/SimpleAdaptiveSlider/simple-adaptive-slider.min.css"> -->
 </head>
 
 <body>
@@ -223,33 +223,25 @@
 				<h2>Популярные производители:</h2>
 				<div><a href="#" class="all_red_button">все производители</a></div>
 			</div>
-	<div class="slider">		
-		<div class="slider__wrapper">
-			<div id="slides_manuf" class="popular_manufacturers_item slider__items">
-				<div class="slider__item slide showing"><a href="#"><img src="img/png/Bosch.png" style="margin-top:40px;"
-							alt="производитель Bosch" width="126" height="37"></a></div>
-				<div class="slider__item slide"><a href="#"><img src="img/png/Makita.png" style="margin-top:40px;"
-							alt="производитель Makita" width="123" height="40"></a></div>
-				<div class="slider__item slide"><a href="#"><img src="img/png/DeWALT.png" style="margin-top:40px;"
-							alt="производитель DeWALT" width="146" height="44"></a></div>
-				<div class="slider__item slide"><a href="#"><img src="img/png/Interscol.png" style="margin-top:20px;"
-							alt="производитель Interscol" width="200" height="88"></a></div>
-				<div class="slider__item slide"><a href="#"><img src="img/png/Hitachi.png" style="margin-top:40px;"
-							alt="производитель Hitachi" width="169" height="31"></a></div>
-				<div class="slider__item slide"><a href="#"><img src="img/png/LG.png" style="margin-top:20px;" alt="производитель LG"
-							width="121" height="73"></a></div>
-				<div class="slider__item slide"><a href="#"><img src="img/png/AEG.png" style="margin-top:20px;"
-							alt="производитель AEG" width="151" height="96"></a></div>
-				<div class="slider__item slide"><a href="#"><img src="img/png/Metabo.png" style="margin-top:20px;"
-							alt="производитель Metabo" width="204" height="69"></a></div>
-			</div>
-		</div>
-		<a class="slider__control slider__control_prev" href="#" role="button" data-slide="prev"></a>
-		<a class="slider__control slider__control_next" href="#" role="button" data-slide="next"></a>
-	</div>
 
-			<!-- 	<button id="back" class="btn_slider_back "><img src="img/svg/slider_btn_left.svg"></button>
-	<button id="next" class="btn_slider_next "><img src="img/svg/slider_btn_right.svg"></button> -->
+			<div id="slides_manuf" class="slider popular_manufacturers_item slider__items">
+				<div class="slider__item "><img src="img/png/Bosch.png" style="margin-top:44px;"
+				 			alt="производитель Bosch" width="126" height="37"></div>
+				<div class="slider__item "><img src="img/png/Makita.png" style="margin-top:40px;"
+							alt="производитель Makita" width="123" height="40"></div>
+				<div class="slider__item "><img src="img/png/DeWALT.png" style="margin-top:40px;"
+							alt="производитель DeWALT" width="146" height="44"></div>
+				<div class="slider__item "><img src="img/png/Interscol.png" style="margin-top:20px;"
+							alt="производитель Interscol" width="200" height="88"></div>
+				<div class="slider__item "><img src="img/png/Hitachi.png" style="margin-top:54px;"
+							alt="производитель Hitachi" width="169" height="31"></div>
+				<div class="slider__item "><img src="img/png/LG.png" style="margin-top:30px;" alt="производитель LG"
+							width="121" height="73"></div>
+				<div class="slider__item "><img src="img/png/AEG.png" style="margin-top:20px;"
+							alt="производитель AEG" width="151" height="96"></div>
+				<div class="slider__item "><img src="img/png/Metabo.png" style="margin-top:32px;"
+							alt="производитель Metabo" width="204" height="69"></div>
+			</div>
 		</section>
 
 		<section class="section_delivery">
@@ -403,8 +395,10 @@
 				class="hidden">Закрыть</span></button>
 	</section>
 	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
-	<script defer src="libs/SimpleAdaptiveSlider/simple-adaptive-slider.js"></script>
-	<script src="js/script.js"></script>
+<!-- 	<script defer src="libs/SimpleAdaptiveSlider/simple-adaptive-slider.js"></script> -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/script.js"></script>
 </body>
 
 </html>
