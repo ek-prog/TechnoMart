@@ -571,10 +571,15 @@ background-color: #ca2c37;
 	flex-wrap: wrap;
 	
 }
-.popular_goods_item li{
+
+.link_goods {
 	border: 1px solid #eaeaea;
 	padding-bottom: 38px;
 }
+.slide_goods{
+	margin: 0 10px 20px 10px;
+}
+
 .link_goods {
 	position: relative;
 }
@@ -599,14 +604,14 @@ background-color: #ca2c37;
     text-align: center;
     margin: 0px 38px 0 38px;
 }
-.popular_goods_price::after{
+/*.popular_goods_price::after{
     content: "";
     top: 0px;
     left: 142px;
     position: absolute;
     border: 19px solid transparent;
     border-left: 19px solid #ee3643;
-}
+}*/
 .old_cost{
 	color: #a9a9a9;
 	/*перечеркнутый текст*/
@@ -619,7 +624,13 @@ background-color: #ca2c37;
 	display: none;
 }
 .add_popular_goods{
-	margin-left: 38px;
+	margin-left: 25%;
+	position: absolute;
+	display: none;
+	top: 40px;
+}
+.add_popular_goods_second_str{
+	margin-left: 20%;
 	position: absolute;
 	display: none;
 	top: 40px;
@@ -671,11 +682,118 @@ background-color: #ca2c37;
 	display: block;
 	position: absolute;
 }
+.link_goods:hover .add_popular_goods_second_str{
+	display: block;
+	position: absolute;
+}
 .link_goods:hover .popular_goods_item_photo{
     visibility: hidden;
     transition: none;
 	
 }
+
+
+/* Слайдер */
+.slick-slider{}
+/* Слайдер запущен */
+.slick-slider.slick-initialized{}
+/* Слайдер с точками */
+.slick-slider.slick-dotted{}
+/* Ограничивающая оболочка */
+.slick-list {
+	overflow: hidden;
+}
+/* Лента слайдов */
+.slick-track{
+	display: flex;
+	align-items: flex-start;
+}
+/* Слайд */
+.slick-slide{}
+/* Слайд активный (показывается) */
+.slick-slide.slick-active{}
+/* Слайд основной */
+.slick-slide.slick-current{}
+/* Слайд по центру */
+.slick-slide.slick-center{}
+/* Клонированный слайд */
+.slick-slide.slick-cloned{}
+/* Стрелка */
+.slick-arrow{}
+/* Стрелка влево */
+.slick-arrow.slick-prev{}
+/* Стрелка вправо */
+.slick-arrow.slick-next{}
+/* Стрелка не активная */
+.slick-arrow.slick-disabled{}
+/* Точки (булиты) */
+.slick-dots{}
+.slick-dots li{}
+/* Активная точка */
+.slick-dots li.slick-active{}
+/* Элемент точки */
+.slick-dots li button{}
+
+
+.slider_products{
+	position: relative;
+	padding: 0px 50px;
+	margin-top: 20px;
+}
+.slider_products .slick-arrow{
+	position: absolute;
+	top: 50%;
+	margin: -24px 0px 0px;
+	z-index: 10;
+	font-size: 0px;
+	width: 22px;
+	height: 40px;
+	border: none;
+	background-color:#63a63e; 
+}
+.slider_products .slick-arrow.slick-prev{
+	left: 0;
+	background-image: url('../img/png/slider_btn_left.png');
+	background-repeat: no-repeat;
+}
+
+.slider_products .slick-arrow.slick-next{
+	right: 0;
+	background-image: url('../img/png/slider_btn_right.png');
+	background-repeat: no-repeat;
+}
+.slider_products .slick-dots{
+	display: flex;
+	margin: 0 auto;
+	justify-content: center;
+}
+.slider_products .slick-dots li{
+	list-style: none;
+	margin: 0px 5px;
+}
+.slider_products .slick-dots li button{
+  font-size: 0;
+  height: 10px;
+  width: 10px;
+  border: 2px solid #63a63e;
+  background-color: #fff;
+  border-radius: 50%;
+  display: inline-block;
+}
+.slider_products .slick-dots li.slick-active button{
+	background-color: #63a63e;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 /*ПОПУЛЯРНЫЕ ПРОИЗВОДИТЕЛИ СПИСОК*/
 .section_popular_manufacturers{
@@ -695,32 +813,7 @@ background-color: #ca2c37;
 	font-weight: 400;
     padding: 20px 0 20px 0;
 }
-/*.popular_manufacturers_item{
-	display: flex;
-	justify-content: space-between;
-	flex-wrap: wrap;
-}*/
-/*.popular_manufacturers_item div{
-	border: 1px solid #eaeaea;
-	width: 220px;
-	height: 145px;
-	margin-top: 20px;
-}
-.popular_manufacturers_item div:hover{
-	box-shadow: 0 10px 25px rgba(41, 52, 73, 0.5);
-}
-.popular_manufacturers_item img{
-	width: auto;
-	margin: 0 auto;
-}*/
-/*.slider__wrapper{
-	background-color: #fff!important;
-}
-.slider__indicator_active {
-    background-color: #ee3643!important;
 
-}
-*/
 .popular_manufacturers_item img{
 	width: auto;
 	margin: 0 auto;
@@ -771,6 +864,7 @@ background-color: #ca2c37;
 .slider{
 	position: relative;
 	padding: 0px 50px;
+	margin-top: 20px;
 }
 .slider .slick-arrow{
 	position: absolute;
@@ -781,7 +875,7 @@ background-color: #ca2c37;
 	width: 22px;
 	height: 40px;
 	border: none;
-	background-color:rgba(238, 54, 67, 0.9); 
+	background-color:#63a63e; 
 }
 .slider .slick-arrow.slick-prev{
 	left: 0;

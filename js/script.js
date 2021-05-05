@@ -70,19 +70,6 @@ function showSlides() {
 
 
 
-//Слайдер товаров
-
-let slidesGoods = document.querySelectorAll('#slides .slide');
-let currentSlideGoods = 0;
-let slideIntervalGoods = setInterval(nextSlideGoods, 2000);
-
-function nextSlideGoods() {
-	if (document.body.clientWidth < 640) {
-		slidesGoods[currentSlideGoods].className = 'slide';
-		currentSlideGoods = (currentSlideGoods + 1) % slidesGoods.length;
-		slidesGoods[currentSlideGoods].className = 'slide showing'
-	}
-}
 
 
 
@@ -153,7 +140,7 @@ $(document).ready(function(){
 		speed: 1000,
 		easing: 'ease',
 		infinite: true,
-		initialSlide: 2,
+		initialSlide: 1,
 		autoplay: true,
 		autoplaySpeed: 2000,
 		draggable: true,
@@ -169,6 +156,36 @@ $(document).ready(function(){
 			}
 		},{
 			breakpoint: 640,
+			settings: {
+				slidesToShow: 1,
+				slidesToScroll: 1
+			}
+		}
+		]
+	});
+});
+
+$(document).ready(function(){
+	$('.slider_products').slick({
+		arrows: true,
+		dots: true, 
+		slidesToShow: 3,
+		slidesToScroll: 2,
+		speed: 1000,
+		easing: 'ease',
+		infinite: true,
+		initialSlide: 1,
+		autoplay: true,
+		autoplaySpeed: 3000,
+		responsive:[
+		{
+			breakpoint: 840,
+			settings: {
+				slidesToShow: 2,
+				slidesToScroll: 1
+			}
+		},{
+			breakpoint: 628,
 			settings: {
 				slidesToShow: 1,
 				slidesToScroll: 1

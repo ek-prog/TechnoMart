@@ -223,7 +223,7 @@ function outpuOnThePage(arr) {
         out += '<p>' + el.name + '</p>';
         out += '<p><span class="old_cost">' + el.price + 'Р.</span></p>';
         out += '<a class="popular_goods_price" href="#">' + el.price + 'Р.</a>';
-        out += '<div class="add_popular_goods">';
+        out += '<div class="add_popular_goods_second_str">';
         out += '<button class="btn_popular_goods btn_popular_goods_first">Купить</button>';
         out += '<button class="btn_popular_goods btn_popular_goods_second">В закладки</button>';
         out += '</div>';
