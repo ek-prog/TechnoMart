@@ -8,6 +8,16 @@ function openForm(el) {
 function closeForm(el) {
     el.style.display = "none"
 }
+
+
+
+
+function myFunction(el){
+    el.classList.toggle('items_showing');
+}
+
+
+
 // ВЫВОД ТОВАРОВ НА СТРАНИЦУ
 
 let products = [
@@ -278,6 +288,14 @@ document.querySelector('#btn_up').onclick = function () {
 }
 
 
+    let chboxxMin = document.getElementById('tel_sort_up');
+function checkCheckboxMin(inp){
+    if(inp.checked){
+       sortPriseUp();
+    } 
+}
+
+
 
 function sortDown() {
     products.sort(function (a, b) {
@@ -289,6 +307,12 @@ document.querySelector('#btn_down').onclick = function () {
     sortDown();
 }
 
+    let chboxxMax = document.getElementById('tel_sort_down');
+function checkCheckboxMax(inp){
+    if(inp.checked){
+       sortDown();
+    } 
+}
 
 
 //СОРТИРОВКА ПО ПРОИЗВОДИТЕЛЯМ
@@ -440,7 +464,6 @@ document.querySelector('.button_first').onclick = function(){
 document.querySelector('.button_second').onclick = function(){
     myFunction(item_show_two);
 }
-
 
 
 

@@ -206,19 +206,17 @@
 
 					<div class="box_sort_button">
 						<button class="filter_btn"
-							onclick="openForm(document.querySelector('.box_sort_dropdown_content'))">Сортировка:</button>
+							onclick="myFunction(document.querySelector('.box_sort_dropdown_content'))">Сортировка:</button>
 						<div class="box_sort_dropdown_content">
 							<p>По цене:</p>
 							<label>
-								<p><input name="min" type="checkbox" value="min">По возрастанию</p>
+								<p><input id="tel_sort_up" onchange="checkCheckboxMin(chboxxMin)" name="min" type="checkbox" value="min">По возрастанию</p>
 							</label>
 							<label>
-								<p><input name="max" type="checkbox" value="max"> По убыванию</p>
+								<p><input id="tel_sort_down" onchange="checkCheckboxMax(chboxxMax)" name="max" type="checkbox" value="max"> По убыванию</p>
 							</label>
 							<p>По типу:</p>
 							<p>По функционалу:</p>
-							<button
-								onclick="closeForm(document.querySelector('.box_sort_dropdown_content'))">Показать</button>
 
 						</div>
 					</div>
