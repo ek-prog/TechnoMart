@@ -508,60 +508,7 @@ input.search::placeholder{
 
 
 
-.item_slide{
-    left: 0px;
-    top: 0px;
-    width: 100%;
-    height: 100%;
-/*    display: none;*/
-}
 
-.dots{
-    position: absolute;
-    bottom: 10px;
-    text-align: center;
-    width: 100%;
-}
-
-.dot {
-  cursor: pointer;
-  height: 6px;
-  width: 6px;
-  margin: 0 2px;
-  border: 2px solid #fff;
-  background-color: #fff;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-.active, .dot:hover {
-background-color: #ca2c37;
-}
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@-webkit-keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
-}
-
-@keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
-}
-/* .slider_photo_block{
-	display: block!important;
-    object-fit: cover;
-    width: 100%;
-} */
-/* .item_category_slider div{
-	display: none;
-} */
 
 /*ПОПУЛЯРНЫЕ ТОВАРЫ СПИСОК*/
 .section_popular_goods{
@@ -622,14 +569,7 @@ background-color: #ca2c37;
     text-align: center;
     margin: 0px 38px 0 38px;
 }
-/*.popular_goods_price::after{
-    content: "";
-    top: 0px;
-    left: 142px;
-    position: absolute;
-    border: 19px solid transparent;
-    border-left: 19px solid #ee3643;
-}*/
+
 .old_cost{
 	color: #a9a9a9;
 	/*перечеркнутый текст*/
@@ -929,10 +869,120 @@ background-color: #ca2c37;
 }
 
 /*СЕРВИС И ДОСТАВКА*/
-.section_delivery{
+.service-slider{
+	display: flex;
+}
+.service_title{
+	padding-top: 20px;
+	font-size: 30px;
+	font-weight: 400;
+	text-transform: uppercase;
+	color: #000000;
+	line-height: 30px;
+}
+.service{
 	background-color: #f3f7f8;
 	margin-top: 34px;
 }
+.service_text{
+	font-size: 13px;
+	color: #32425c;
+	width: 290px;
+    margin-top: 16px;
+    margin-bottom: 34px;
+
+}
+.service-slider-controls {
+    position: relative;
+    float: left;
+    width: 240px;
+}
+.service-slider-btn-1:checked ~ .service-slider-controls .control-1,
+.service-slider-btn-2:checked ~ .service-slider-controls .control-2,
+.service-slider-btn-3:checked ~ .service-slider-controls .control-3 {
+    color: #32425c;
+    background-color: #ffffff;
+    border-color: #ffffff;
+}
+/*.service-slider-controls {
+    position: relative;
+    float: left;
+    width: 240px;
+}*/
+
+.service-slider-inner {
+
+    min-height: 284px;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: 100% 100%;
+}
+
+.service-slider-controls:after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: -50px;
+    z-index: 100;
+    width: 10px;
+    height: 272px;
+    background: url(../img/png/vertical_line.png) no-repeat;
+    background-position: -459px 0;
+}
+
+.service-slider-control {
+    display: block;
+    padding: 14px 22px 15px 22px;
+    border-top: 1px solid #405069;
+    border-bottom: 1px solid #293449;
+    font-size: 21px;
+    line-height: 30px;
+    font-family: 'Cuprum', 'Arial', sans-serif;
+    font-weight: 700;
+    color: #ffffff;
+    background-color: #32425c;
+    cursor: pointer;
+}
+
+.service-slider-control:hover {
+    background-color: #293449;
+}
+
+.service-slider input[type='radio'] {
+    display: none;
+}
+
+
+.service-slider-btn-1:checked ~ .service-slider-inner .service-slides {
+    -webkit-transform: translate(0);
+    -ms-transform: translate(0);
+    transform: translate(0);
+}
+
+.service-slider-btn-2:checked ~ .service-slider-inner .service-slides {
+    -webkit-transform: translate(-620px);
+    -ms-transform: translate(-620px);
+    transform: translate(-620px);
+}
+
+.service-slider-btn-3:checked ~ .service-slider-inner .service-slides {
+    -webkit-transform: translate(-1240px);
+    -ms-transform: translate(-1240px);
+    transform: translate(-1240px);
+}
+/*.service-slider-btn-1:checked ~ .service-slider-inner {
+    background-image: url(../img/png/service_first.png);
+}
+
+.service-slider-btn-2:checked ~ .service-slider-inner {
+    background-image: url(../img/png/service_second.png);
+}
+
+.service-slider-btn-3:checked ~ .service-slider-inner {
+    background-image: url(../img/png/service_three.png);
+}
+*/
+
 .visible{
 	background-color: #fff!important;
 	color: #000;
@@ -942,7 +992,7 @@ background-color: #ca2c37;
 	color: #32425c;;
 
 }
-.section_delivery_service h2{
+.service_title{
 	font-size: 30px;
 	font-weight: 400;
 	text-transform: uppercase;
