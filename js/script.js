@@ -169,6 +169,7 @@ $(document).ready(function(){
 
     let serviceButtons = document.getElementsByClassName('service_slider_control');
     let activeService = document.getElementsByClassName('service_active');
+
     function toggleService(){
     	for(let i = 0; i < serviceButtons.length; i++){
     		serviceButtons[i].onclick = function() {
@@ -201,27 +202,19 @@ $(document).ready(function(){
     }
 
 
+first = document.getElementById('first');
+second = document.getElementById('second');
+third = document.getElementById('third');
 
-
-
-    function workPlease(){
-    	toggleService();
-    	document.getElementById('first').onclick = function(){
-    		openbox('first_service');
-    	};
-    	document.getElementById('second').onclick = function(){
-    		openbox('second_service');
-    	};
-    	document.getElementById('third').onclick = function(){
-    		openbox('thrird_service');
-    	};
-
-    	
-    }
-
-
-document.querySelectorAll('.service_slider_controls').forEach(el =>{
-	el.onclick = function(){
-		workPlease();
-	}
+first.addEventListener('click', function(){
+	openbox('first_service');
+	toggleService();
+});
+second.addEventListener('click', function(){
+	openbox('second_service');
+	toggleService();
+});
+third.addEventListener('click', function(){
+	openbox('thrird_service');
+	toggleService();
 });
