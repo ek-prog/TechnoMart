@@ -136,10 +136,11 @@ $(document).ready(function(){
 		arrows: true,
 		dots: true, 
 		slidesToShow: 3,
-		slidesToScroll: 2,
+		slidesToScroll: 3,
 		speed: 1000,
 		easing: 'ease',
 		infinite: true,
+		 // centerMode: true,
 		initialSlide: 1,
 		autoplay: true,
 		autoplaySpeed: 3000,
@@ -207,14 +208,14 @@ second = document.getElementById('second');
 third = document.getElementById('third');
 
 first.addEventListener('click', function(){
-	openbox('first_service');
 	toggleService();
+	openbox('first_service');
 });
 second.addEventListener('click', function(){
-	openbox('second_service');
 	toggleService();
+	openbox('second_service');
 });
 third.addEventListener('click', function(){
-	openbox('thrird_service');
 	toggleService();
+	openbox('thrird_service');
 });
