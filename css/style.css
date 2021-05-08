@@ -869,7 +869,7 @@ input.search::placeholder{
 }
 
 /*СЕРВИС И ДОСТАВКА*/
-.service-slider{
+.service_slider{
 	display: flex;
 	justify-content: space-between;
 	flex-wrap: wrap;
@@ -885,6 +885,7 @@ input.search::placeholder{
 .service{
 	background-color: #f3f7f8;
 	margin-top: 34px;
+	padding-bottom: 34px;
 }
 .service_text{
 	font-size: 16px;
@@ -897,22 +898,9 @@ input.search::placeholder{
 .service_slide_text{
 	width: 307px;
 }
-.service-slider-controls {
-
+.service_slider_controls {
     width: 240px;
 }
-.service-slider-btn-1:checked ~ .service-slider-controls .control-1,
-.service-slider-btn-2:checked ~ .service-slider-controls .control-2,
-.service-slider-btn-3:checked ~ .service-slider-controls .control-3 {
-    color: #32425c;
-    background-color: #ffffff;
-    border-color: #ffffff;
-}
-/*.service-slider-controls {
-    position: relative;
-    float: left;
-    width: 240px;
-}*/
 
 .service_slider_inner{
 	display: flex;
@@ -923,7 +911,7 @@ input.search::placeholder{
 	width: 300px;
 	height: 200px;
 }
-.service-slider-control {
+.service_slider_control {
     display: block;
     padding: 14px 22px 15px 22px;
     border-top: 1px solid #405069;
@@ -935,119 +923,46 @@ input.search::placeholder{
     color: #ffffff;
     background-color: #32425c;
     cursor: pointer;
+    width: 100%;
 }
 
-.service-slider-control:hover {
+.service_slider_control:hover {
     background-color: #293449;
 }
-
-.service-slider input[type='radio'] {
-    display: none;
-}
-
-
-.service-slider-btn-1:checked ~ .service-slider-inner .service-slides {
-    -webkit-transform: translate(0);
-    -ms-transform: translate(0);
-    transform: translate(0);
-}
-
-.service-slider-btn-2:checked ~ .service-slider-inner .service-slides {
-    -webkit-transform: translate(-620px);
-    -ms-transform: translate(-620px);
-    transform: translate(-620px);
-}
-
-.service-slider-btn-3:checked ~ .service-slider-inner .service-slides {
-    -webkit-transform: translate(-1240px);
-    -ms-transform: translate(-1240px);
-    transform: translate(-1240px);
-}
-/*.service-slider-btn-1:checked ~ .service-slider-inner {
-    background-image: url(../img/png/service_first.png);
-}
-
-.service-slider-btn-2:checked ~ .service-slider-inner {
-    background-image: url(../img/png/service_second.png);
-}
-
-.service-slider-btn-3:checked ~ .service-slider-inner {
-    background-image: url(../img/png/service_three.png);
-}
-*/
-
-.visible{
-	background-color: #fff!important;
-	color: #000;
-}
-.section_delivery p{
-	font-size: 13px;
-	color: #32425c;;
-
-}
-.service_title{
-	font-size: 30px;
-	font-weight: 400;
-	text-transform: uppercase;
-	color: #000000;
-	line-height: 30px;
-}
-.section_delivery_service{
-	width: 398px;
-	margin-bottom: 68px;
-    padding-top: 68px;
-}
-.section_delivery_block_item h2{
+.service_slider_control:focus {
 	color: #32425c;
-	font-size: 36px;
-	font-weight: 400;
-	line-height: 36px;
+    background-color: #ffffff;
+    border-color: #ffffff;
 }
-.section_delivery_block_item{
+.service_active{
+	color: #32425c;
+    background-color: #ffffff;
+    border-color: #ffffff;
+}
+
+
+.service_slider_inner{
+	display: none;
+}
+.show_service{
 	display: flex;
-	justify-content: space-between;
-	flex-wrap: wrap;
-	padding-bottom: 34px;
 }
-.section_delivery_item a:hover{
-	background-color: #fff!important;
-	color: #000;
+
+
+
+.service_slider_controls{
+	position: relative;
 }
-.section_delivery_item::after{
+
+.service_slider_controls::after{
     content: "";
     position: absolute;
     background-image: url(../img/png/vertical_line.png);
     background-repeat: no-repeat;
-    width: 10px;
-    height: 313px;
-    left: 195px;
+    width: 16px;
+    height: 281px;
+    left: 232px;
     top: -50px;
-}
-.section_delivery_item{
-	position: relative;
-	display: flex;
-	flex-direction: column;
-}
-.section_delivery_item a{
-	background-color: #32425c;
-	box-shadow: 0 1px 0 #293449, inset 0 1px 0 #405069;
-    width: 200px;
-    text-align: left;
-    padding: 18px 0 18px 0;
-    font-size: 21px;
-    font-weight: 700;
-}
-.section_delivery_block_delivery{
-	width: 275px;
-}
-.guarantee{
-	display: none;
-}
-.credit{
-	display: none;
-}
-.link_guarantee:hover .guarantee{
-	display: block;
 }
 
 

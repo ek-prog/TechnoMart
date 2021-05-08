@@ -96,17 +96,6 @@ $(document).ready(function(){
 });
 
 
-
-
-
-
-
-
-
-
-
-
-
 $(document).ready(function(){
 	$('.slider').slick({
 		arrows: true,
@@ -170,4 +159,69 @@ $(document).ready(function(){
 		}
 		]
 	});
+});
+
+
+    let firstBlock = document.getElementById('first_service');
+    let secondBlock = document.getElementById('second_service');
+    let thirdBlock = document.getElementById('thrird_service'); 
+
+
+    let serviceButtons = document.getElementsByClassName('service_slider_control');
+    let activeService = document.getElementsByClassName('service_active');
+    function toggleService(){
+    	for(let i = 0; i < serviceButtons.length; i++){
+    		serviceButtons[i].onclick = function() {
+    			let currentActive = activeService[0];
+    			if(currentActive){
+    				currentActive.classList.remove('service_active');
+    			}
+    			if(currentActive !== this){
+    				this.classList.add('service_active');
+    			}
+    		};
+    	}
+
+    }
+
+    
+
+
+
+
+    function openbox(id){
+    	let allBlock = document.querySelectorAll('.service_slider_inner');
+    	for(let i = 0; i < allBlock.length; i++){
+    		if(allBlock[i].id == id){
+    			allBlock[i].style.display = (allBlock[i].style.display == 'none')? 'flex' : 'none';
+    		}else{
+    			allBlock[i].style.display = 'none';
+    		}
+    	}
+    }
+
+
+
+
+
+    function workPlease(){
+    	toggleService();
+    	document.getElementById('first').onclick = function(){
+    		openbox('first_service');
+    	};
+    	document.getElementById('second').onclick = function(){
+    		openbox('second_service');
+    	};
+    	document.getElementById('third').onclick = function(){
+    		openbox('thrird_service');
+    	};
+
+    	
+    }
+
+
+document.querySelectorAll('.service_slider_controls').forEach(el =>{
+	el.onclick = function(){
+		workPlease();
+	}
 });
