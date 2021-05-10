@@ -12,11 +12,27 @@ function closeForm(el) {
 
 
 
-function myFunction(el){
-    el.classList.toggle('items_showing');
+// function myFunction(el){
+//     el.classList.toggle('items_showing');
+// }
+
+let navLink = document.getElementsByClassName('header_navigation_item_link');
+let focusLink =  document.getElementsByClassName('focus');
+console.log(focusLink);
+function clickToggleNav(){
+    for(let i = 0; i < navLink.length; i++){
+        navLink[i].onclick = function(){
+            let currentLink = focusLink[0];
+            if(currentLink){
+                currentLink.classList.remove('focus');
+            }
+            if(currentLink !== this){
+                this.classList.add('focus');
+            }
+        };
+    }
 }
-
-
+clickToggleNav();
 
 // ВЫВОД ТОВАРОВ НА СТРАНИЦУ
 

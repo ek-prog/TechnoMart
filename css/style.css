@@ -20,6 +20,9 @@ img {
 ul {
    list-style: none;
 }
+b{
+ font-weight: bold;
+}
 
 .all_red_button{
 	background-color: #ee3643!important;
@@ -1431,11 +1434,77 @@ ul.breadcrumbs li+li:before {
 
 
 
+/*СТРАНИЦА ДОСТАВКА*/
+
+.delivery_main_block p{
+	line-height: 24px;
+	font-family: inherit;
+}
+
+.delivery_main_block h2{
+	line-height: 24px;
+	font-size: 28px;
+	margin-top: 34px;
+}
+.delivery_main_block b{
+   font-size: 20px;
+   color: #ee3643;
+}
+
+
+
+
+/*СТРАНИЦА НОВОСТИ*/
+.news{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.box_news{
+	width: 250px;
+	border: 1px solid #eaeaea;
+	padding: 38px 14px 38px 14px;
+	margin-top: 24px;
+}
+.box_news:hover{
+	box-shadow: 0 10px 25px rgb(41 52 73 / 50%);
+}
+
+.news_title{
+    font-family: inherit;
+    font-size: 20px;
+    padding: 0 0 28px 0;
+}
+
+
+.news_date{
+	margin: 18px 0 0 0;
+    color: brown;
+}
 
 
 
 
 
+
+
+/*СТРАНИЦА СПЕЦПРЕДЛОЖЕНИЯ*/
+.box_sale{
+		margin-top: 24px;
+}
+.box_sale b {
+    font-size: 18px;
+    color: #ee3643;
+}
+.box_sale p{
+    border: 1px solid #eaeaea;
+    width: 293px;
+    padding: 12px 12px 12px 12px;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 17px;
+}
 
 
 /*ФОРМА*/

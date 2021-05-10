@@ -2,13 +2,14 @@
 <html lang="ru">
 
 <head>
-	<title>Каталог</title>
+	<title>Доставка</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/style_mobile.css">
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Cuprum:wght@400;700&display=swap" rel="stylesheet">
+<!-- 	<link rel="stylesheet" href="libs/SimpleAdaptiveSlider/simple-adaptive-slider.min.css"> -->
 </head>
 
 <body>
@@ -77,179 +78,95 @@
 								</li>
 								<li><img src="img/png/bild.png" width="30" height="30"><a href="#">Строительное
 										оборудование</a></li>
-										
+
 							</ul>
 						</li>
 						<li class="header_navigation_item_link"><a href="index4.html">Новости</a></li>
 						<li class="header_navigation_item_link"><a href="#">Спецпредложения</a></li>
-						<li class="header_navigation_item_link"><a href="index3.html">Доставка</a></li>
+						<li class="header_navigation_item_link"><a href="#">Доставка</a></li>
 						<li class="header_navigation_item_link"><a href="#">Контакты</a></li>
 					</ul>
 				</nav>
 			</div>
 		</header>
 	</section>
-	<main class="container">
-		<div>
+<main class="container delivery_main_block">
+			<div>
 			<ul class="breadcrumbs">
 				<!-- СПРОСИТЬ -->
 				<li><a class="main_breabcrumb" href="#"><span class="hidden">main</span></a></li>
-				<li><a href="#">Каталог</a></li>
-				<li><a href="#">Инструмент</a></li>
-				<li><a href="#">Перфораторы</a></li>
+				<li><a href="#">Доставка</a></li>
 			</ul>
 		</div>
-		<div class="section_perforator">
-			<h2>Перфораторы</h2>
-		</div>
+		
+	<h2>Доставка</h2>
+	<p>Уважаемые покупатели. Заказанный товар можно получить с помощью курьера или забрав самостоятельно. Условия доставки и получения товара следующие:</p>
+	<p><b>1. Курьерская доставка по Санкт-Петербургу и регионам</b></p>
+	<table style="border-collapse: collapse;">
+		<tbody>
+			<tr>
+				<td>
+					Зона доставки
+				</td>
+				<td>
+					Тариф на доставку, руб.
+				</td>
+			</tr>
+			<tr>
+				<td>
+					В пределах города (до знака)
+				</td>
+				<td>
+					До 20 кг - 350 руб., свыше 20 кг - 500 руб.
+				</td>
+			</tr>
+			<tr>
+				<td>
+					До 100 км от центра города
+				</td>
+				<td>
+					350 руб.+ 20 руб. за 1 км (оплата в одну сторону)
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Свыше 100 км от центра города
+				</td>
+				<td>
+					Согласовывается дополнительно при формировании и оформлении заказа
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<p><b>Важно!</b></p>
+	<p><b>Доставка заказа осуществляется до подъезда!</b></p>
 
-		<section>
-			<div class="wrapper_goods">
-				<div class="box_filter">
-					<div class="box_filter_paragraph">
-						<p>Фильтр:</p>
+					<div class="map_box" id="map">
+						<iframe
+							src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1413.2217732983852!2d30.321989079263492!3d59.93882248713267!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1615794817783!5m2!1sru!2sru"
+							width="100%" height="400" style="border: 0;" allowfullscreen="" loading="lazy">
+						</iframe>
 					</div>
-					<div class="box_cost_range">
-						<p>Цена:</p>
-						<input type="range" min="12" max="2175" value="12" class="slider_cost" id="lower">
-						<input type="range" min="12" max="2175" value="2175" class="slider_cost" id="higher">
-					</div>
-					<div class="choose_items choose_items_manufacterer">
-						<form action="#">
-							<h3>Производители</h3>
-							<label>
-								<p><input class="manufacturer" name="Bosch"
-										type="checkbox" value="Bosch">Bosch</p>
-							</label>
-							<label>
-								<p><input class="manufacturer" name="Интерскол"
-										type="checkbox" value="Интерскол">Интерскол</p>
-							</label>
-							<label>
-								<p><input  class="manufacturer" name="Makita"
-										type="checkbox" value="Makita">Makita</p>
-							</label>
-							<label>
-								<p><input class="manufacturer" name="DeWALT"
-										type="checkbox" value="DeWALT">DeWALT</p>
-							</label>
-							<label>
-								<p><input class="manufacturer" name="Hitachi"
-										type="checkbox" value="Hitachi">Hitachi
-								</p>
-							</label>
-							<button onclick="pushElements()" type="button" class="click">Показать</button>
-						</form>
-						<!-- <hr style="margin-top: 10px;"> -->
-					</div>
-					<div class="choose_items">
-						<form action="#">
-							<h3>Тип питания</h3>
-							<label>
-								<p><input class="conection" name="Аккумуляторные" type="checkbox" value="Аккумуляторные">Аккумуляторные
-								</p>
-							</label>
-							<label>
-								<p><input class="conection" name="Сетевые" type="checkbox" value="Сетевые">Сетевые</p>
-							</label>
-							<button onclick="pushElementsConect()" type="button" class="click">Показать</button>
-						</form>
-					</div>
+<p>Заказы, размещенные покупателем в интернет-магазине <b>до 16:00</b> текущего дня, доставляются<b>с 10:00 до 18:00 следующего рабочего дня</b> (при условии наличия товара на складах). Доставка заказов, оформленных после <b>16:00</b> текущего дня, осуществляется, как правило, <b>через день после формирования заказа.</b></p>
+<p>Вместе с заказом Вам предоставят сопроводительные документы: кассовые чеки, накладную, гарантийные талоны.</p>
+<p>Мы осуществляем доставку грузов только до парадной.</p>
+<p>Обратите внимание, при доставке, проверка работоспособности техники курьером не осуществляется.</p>
+<p>Проверка техники в присутствии покупателя осуществляется при самостоятельном получении заказа в магазинах сети Планета Инструмент.</p>
 
 
+	<p><b>2. Доставка по России</b></p>
+	<p>2.1 Положите нужные товары в "корзину"</p>
+	<p>2.2. При оформления заказа укажите способ доставки: "Доставка по России" и не забудьте указать город Доставки</p>
+	<p>2.3  Выберите способ оплаты </p>
+	<p>2.4. После того как Вы отправите заказ с Вами свяжется наш менеджер для подтверждения интернет-заказа и предложит транспортную компанию на выбор ( Обращаем Ваше внимание, что доставка до транспортной компании бесплатно) </p>
+	<p>2.5. После того как Вы оплатили заказ мы доставляем до терминала транспортной компании и сообщаем трек номер для самостоятельного отслеживания посылки.</p>
+	<p>2.6. Получите товар в пункте самовывоза или доставкой курьера (в зависимости Вашего выбора получения у транспортной компанией) </p>
+	<p>Доставка товаров до терминала производится в городе Санкт-Петербург.</p>
+	<p><b>3. Самовывоз</b></p>
+	<p>Вы можете самостоятельно оплатить и забрать оформленный в интернет-магазине товар в розничных магазинах сети Планета Инструмент, согласовав место получения с менеджером оформившим и сопровождающим заказ.</p>
+	<p>К оплате принимаются наличные деньги и банковские карты. Адреса магазинов и точек выдачи товара можно посмотреть  здесь.</p>
 
-				</div>
-				<div class="box_sorting_goods">
-					<p>Сортировка:</p>
-					<div class="btn_sort">
-						<div class="btn_sort_cost">
-							<button class="button_sort">По цене</button>
-							<div class="choose_sort_btn">
-								<button id="btn_up">По возрастанию</button>
-								<button id="btn_down"> По убыванию</button>
-							</div>
-						</div>
-
-						<div><button>По типу</button></div>
-						<div><button>По функционалу</button></div>
-					</div>
-				</div>
-
-
-				<div class="box_filter_sort_for_tel">
-					<div class="box_filter_button">
-						<button class="filter_btn"
-							onclick="openForm(document.querySelector('.box_filter_dropdown_content'))">Фильтр:</button>
-						<div class="box_filter_dropdown_content">
-
-							<h3>Производители</h3>
-							<label>
-								<p><input name="Bosch" type="checkbox" value="Bosch">Bosch</p>
-							</label>
-							<label>
-								<p><input name="Интерскол" type="checkbox" value="Интерскол"> Интерскол</p>
-							</label>
-							<label>
-								<p><input name="Makita" type="checkbox" value="Makita"> Makita</p>
-							</label>
-							<label>
-								<p><input name="DeWALT" type="checkbox" value="DeWALT"> DeWALT</p>
-							</label>
-							<label>
-								<p><input name="Hitachi" type="checkbox" value="Hitachi" checked> Hitachi</p>
-							</label>
-							<button
-								onclick="closeForm(document.querySelector('.box_filter_dropdown_content'))">Показать</button>
-
-						</div>
-					</div>
-
-					<div class="box_sort_button">
-						<button class="filter_btn"
-							onclick="myFunction(document.querySelector('.box_sort_dropdown_content'))">Сортировка:</button>
-						<div class="box_sort_dropdown_content">
-							<p>По цене:</p>
-							<label>
-								<p><input id="tel_sort_up" onchange="checkCheckboxMin(chboxxMin)" name="min" type="checkbox" value="min">По возрастанию</p>
-							</label>
-							<label>
-								<p><input id="tel_sort_down" onchange="checkCheckboxMax(chboxxMax)" name="max" type="checkbox" value="max"> По убыванию</p>
-							</label>
-							<p>По типу:</p>
-							<p>По функционалу:</p>
-
-						</div>
-					</div>
-				</div>
-
-
-
-				<div class="box_output_goods">
-					<ul class="popular_goods_item box_output_goods_ul"></ul>
-				</div>
-			</div>
-			<div class="page_numbers" id="pagination">
-				<!-- 		<li>1</li>
-			<li>2</li>
-			<li>3</li>
-			<li>Следующая</li> -->
-			</div>
-		</section>
-
-	</main>
-	<section class="box_text_about_instrument">
-		<div class="container">
-			<h2>Пара слов о перфораторах</h2>
-			<p>Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в
-				кирпиче, бетоне и камне.
-				Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции
-				дрели, шуруповерта и отбойного молотка.
-				В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и
-				ударная дрель.
-			</p>
-		</div>
-	</section>
-
+</main>
 
 	<footer>
 		<div class="footer_wrapper">
@@ -263,7 +180,7 @@
 						<li><a href="#">Компания</a></li>
 						<li><a href="#">Новости</a></li>
 						<li><a href="#">Каталог</a></li>
-						<li><a href="index3.html">Доставка</a></li>
+						<li><a href="#">Доставка</a></li>
 						<li><a href="#">Контакты</a></li>
 					</ul>
 				</div>
@@ -304,9 +221,8 @@
 		</div>
 
 	</footer>
-	
-	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
-	<script src="js/second.script.js"></script>
+    <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+
 </body>
 
 </html>
