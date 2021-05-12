@@ -275,11 +275,9 @@
 	.box_sorting_goods{
 		display: none;
 	}
-	.box_filter_sort_for_tel{
-		display: flex;
-    	justify-content: space-around;
-    	flex-wrap: wrap;
-	}
+.box_filter_sort_for_tel{
+	display: block;
+}
 }
 
 

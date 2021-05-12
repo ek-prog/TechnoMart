@@ -1319,15 +1319,11 @@ ul.breadcrumbs li+li:before {
 .box_filter_sort_for_tel{
 	display: none;
 }
-.box_filter_button{
-	position: relative;
-    display: inline-block;
-}
+
 .box_filter_dropdown_content{
 	display: none;
-    position: absolute;
     background-color: #f2f6f8;
-    min-width: 160px;
+    width: 100%;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
 }
@@ -1341,6 +1337,9 @@ ul.breadcrumbs li+li:before {
 .box_filter_sort_for_tel{
 	background-color: #f7f3ec;
     padding: 20px;
+}
+.box_filter_sort_for_tel input{
+    margin-right: 5px;
 }
 .box_filter_dropdown_content h3{
 	padding: 20px;
@@ -1356,17 +1355,17 @@ ul.breadcrumbs li+li:before {
 }
 .filter_btn{
 	padding: 10px;
-    width: 150px;
+    width: 100%;
     outline: none;
     border: none;
     background: white;
+    margin-top: 20px;
 }
 
 .box_sort_dropdown_content{
 	display: none;
-    position: absolute;
     background-color: #f2f6f8;
-    min-width: 160px;
+    width: 100%;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
 }

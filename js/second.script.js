@@ -18,7 +18,7 @@ function closeForm(el) {
 
 let navLink = document.getElementsByClassName('header_navigation_item_link');
 let focusLink =  document.getElementsByClassName('focus');
-console.log(focusLink);
+// console.log(focusLink);
 function clickToggleNav(){
     for(let i = 0; i < navLink.length; i++){
         navLink[i].onclick = function(){
@@ -37,110 +37,126 @@ clickToggleNav();
 // ВЫВОД ТОВАРОВ НА СТРАНИЦУ
 
 let products = [
-    {
+     {
         img: 'img/png/Perforator_1.png',
         name: 'Перфоратор bosch <br> BFG 3000 ',
         manufacturer: 'Bosch',
         connection: 'Аккумуляторные',
-        price: 13950
+        price: 13950,
+        data: 1
     },
     {
         img: 'img/png/Perforator_2.png',
         name: 'Перфоратор Makita <br> BFG 6000',
         manufacturer: 'Makita',
         connection: 'Сетевые',
-        price: 22000
+        price: 22000,
+        data: 2
     },
     {
         img: 'img/png/Perforator_4.png',
         name: 'Перфоратор Metabo <br> BFG 9000',
         manufacturer: 'Metabo',
         connection: 'Аккумуляторные',
-        price: 12200
+        price: 12200,
+        data: 3
     },
     {
         img: 'img/png/Perforator_1.png',
         name: 'Перфоратор Hitachi <br> BFG 3000 ',
         manufacturer: 'Hitachi',
         connection: 'Сетевые',
-        price: 27750
+        price: 27750,
+        data: 4
     },
     {
         img: 'img/png/Perforator_2.png',
         name: 'Перфоратор Makita <br> BFG 6000',
         manufacturer: 'Makita',
         connection: 'Аккумуляторные',
-        price: 10400
+        price: 10400,
+        data: 5
     },
     {
         img: 'img/png/Perforator_3.png',
         name: 'Перфоратор Metabo <br> BFG 9000',
         manufacturer: 'Metabo',
         connection: 'Сетевые',
-        price: 13700
+        price: 13700,
+        data: 6
     },
     {
         img: 'img/png/Perforator_3.png',
         name: 'Перфоратор DeWALT <br> BFG 9000',
         manufacturer: 'DeWALT',
         connection: 'Аккумуляторные',
-        price: 12200
+        price: 12200,
+        data: 7
     },
     {
         img: 'img/png/Perforator_4.png',
         name: '<p>Перфоратор bosch <br> BFG 2000</p>',
         manufacturer: 'Bosch',
         connection: 'Аккумуляторные',
-        price: 10300
+        price: 10300,
+        data: 8
     },
     {
         img: 'img/png/Perforator_3.png',
         name: 'Перфоратор Metabo <br> BFG 9000',
         manufacturer: 'Metabo',
         connection: 'Сетевые',
-        price: 12200
+        price: 12200,
+        data: 9
     },
     {
         img: 'img/png/Perforator_1.png',
         name: 'Перфоратор bosch <br> BFG 3000 ',
         manufacturer: 'Bosch',
         connection: 'Аккумуляторные',
-        price: 12352
+        price: 12352,
+        data: 10
     },
     {
         img: 'img/png/Perforator_2.png',
         name: 'Перфоратор DeWALT <br> BFG 6000',
         manufacturer: 'DeWALT',
         connection: 'Сетевые',
-        price: 15666
+        price: 15666,
+        data: 11
     },
     {
         img: 'img/png/Perforator_3.png',
         name: 'Перфоратор Интерскол <br> BFG 9000',
         manufacturer: 'Интерскол',
         connection: 'Аккумуляторные',
-        price: 22700
+        price: 22700,
+        data: 12
     },
     {
         img: 'img/png/Perforator_1.png',
         name: 'Перфоратор bosch <br> BFG 3000 ',
         manufacturer: 'Bosch',
         connection: 'Сетевые',
-        price: 13950
+        price: 13950,
+        data: 13
     },
     {
         img: 'img/png/Perforator_2.png',
         name: 'Перфоратор Makita <br> BFG 6000',
         manufacturer: 'Makita',
         connection: 'Аккумуляторные',
-        price: 22000
+        price: 22000,
+        data: 14
+
     },
     {
         img: 'img/png/Perforator_4.png',
         name: 'Перфоратор Metabo <br> BFG 9000',
         manufacturer: 'Metabo',
         connection: 'Аккумуляторные',
-        price: 12200
+        price: 12200,
+        data: 15
     }
     // {
     //     img: 'img/png/Perforator_1.png',
@@ -236,26 +252,46 @@ function DisplayList(items, wrapper, rows_per_page, page){
     let end = start + rows_per_page;
     let paginationItems = items.slice(start, end);
     // console.log(paginationItems);
-    document.querySelector('.box_output_goods_ul').innerHTML = outpuOnThePage(paginationItems);
+    outputOnThePage(document.querySelector('.box_output_goods_ul'), paginationItems);
 }
 
 
 
-function outpuOnThePage(arr) {
-    let out = '';
-    arr.forEach(el => {
-        out += '<li class="link_goods">';
-        out += '<img class="popular_goods_item_photo" src="' + el.img + '" width="218" height="170" alt="Перфоратор">';
-        out += '<p>' + el.name + '</p>';
-        out += '<p><span class="old_cost">' + el.price + 'Р.</span></p>';
-        out += '<a class="popular_goods_price" href="#">' + el.price + 'Р.</a>';
-        out += '<div class="add_popular_goods_second_str">';
-        out += '<button class="btn_popular_goods btn_popular_goods_first">Купить</button>';
-        out += '<button class="btn_popular_goods btn_popular_goods_second">В закладки</button>';
-        out += '</div>';
-        out += '</li>';
+function createProduct(product) {
+    const element = document.createElement('li');
+    element.className = 'link_goods';
+
+    element.innerHTML = `
+        <img class="popular_goods_item_photo" src="${product.img}" width="218" height="170" аlt="Перфоратор">
+        <p>${product.name}</p>
+        <p><span class="old_cost">${product.price}</span></p>
+        <a class="popular_goods_price" href="#">${product.price}P.</a>
+        <div class="add_popular_goods_second_str">
+            <button class="btn_popular_goods btn_popular_goods_first add_to_cart" data-art="${product.data}">Купить</button>
+            <button class="btn_popular_goods btn_popular_goods_second">B закладки</button>
+        </div>
+    `;
+
+    return element
+}
+
+// Сохранить в массив products
+function loadProducts() {
+    products.forEach(product => {
+        product.element = createProduct(product);
     });
-    return out;
+}
+loadProducts(); 
+
+
+
+
+function outputOnThePage(container, products) {
+    container.innerHTML = ''; // Стирает со страницы, но элементы сохранены
+
+    products.forEach(product => {
+        container.append(product.element); // Добавляются элементы
+    });
 }
 
 
@@ -485,6 +521,37 @@ document.querySelector('.button_second').onclick = function(){
 
 
 
+function clickElem() {
+    let elem = [];
+    products.forEach(product => {
+        product.element.onclick = function() {
+            elem.push(product); // добавляется кликнутый товар
+            // console.log(elem);
+        }
+    });
+    return elem;
+}
+
+
+let cart = [];
+let buttonBuy = document.querySelectorAll('.add_to_cart');
+
+function addToCart(){
+    buttonBuy.forEach(el =>{
+        el.onclick = function(){
+            cart.push(clickElem());
+            
+            
+        }
+    });
+    return cart;
+}
+// console.log(el.dataset.art);
+addToCart();
+console.log(cart);
+
+
+
 
 
 // itemsButtons.onclick = function(event){
@@ -501,5 +568,9 @@ document.querySelector('.button_second').onclick = function(){
 //     let eachLink = event.target;
 //     findProduct();
 // }
+
+
+
+
 
 

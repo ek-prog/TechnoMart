@@ -1,0 +1,79 @@
+{    
+    "1" : {
+        "img" : "img/png/Perforator_1.png",
+        "name" : "Перфоратор bosch <br> BFG 3000",
+        "manufacturer": "Bosch",
+        "connection": "Аккумуляторные",
+        "price": 13950
+    },
+    "2" : {
+        "img" : "img/png/Perforator_2.png",
+        "name" : "Перфоратор Makita <br> BFG 6000",
+        "manufacturer": "Makita",
+        "connection": "Сетевые",
+        "price": 22500
+    },
+    "3" : {
+        "img" : "img/png/Perforator_4.png",
+        "name" : "Перфоратор Metabo <br> BFG 9000",
+        "manufacturer": "Metabo",
+        "connection": "Аккумуляторные",
+        "price": 21900
+    },
+    "4" : {
+        "img" : "img/png/Perforator_1.png",
+        "name" : "Перфоратор Hitachi <br> BFG 3000",
+        "manufacturer": "Hitachi",
+        "connection": "Сетевые",
+        "price": 10000
+    },
+    "5" : {
+        "img" : "img/png/Perforator_3.png",
+        "name" : "Перфоратор Makita <br> BFG 6000",
+        "manufacturer": "Makita",
+        "connection": "Аккумуляторные",
+        "price": 16300
+    },
+    "6" : {
+        "img" : "img/png/Perforator_2.png",
+        "name" : "Перфоратор bosch <br> BFG 3000",
+        "manufacturer": "Bosch",
+        "connection": "Аккумуляторные",
+        "price": 14800
+    },
+    "7" : {
+        "img" : "img/png/Perforator_1.png",
+        "name" : "Перфоратор DeWALT <br> BFG 9000",
+        "manufacturer": "DeWALT",
+        "connection": "Аккумуляторные",
+        "price": 12200
+    },
+    "8" : {
+        "img" : "img/png/Perforator_3.png",
+        "name" : "Перфоратор DeWALT <br> BFG 9000",
+        "manufacturer": "DeWALT",
+        "connection": "Сетевые",
+        "price": 11050
+    },
+    "9" : {
+        "img" : "img/png/Perforator_2.png",
+        "name" : "Перфоратор bosch <br> BFG 3000",
+        "manufacturer": "Bosch",
+        "connection": "Сетевые",
+        "price": 17890
+    },
+    "10" : {
+        "img" : "img/png/Perforator_4.png",
+        "name" : "Перфоратор Makita <br> BFG 6000",
+        "manufacturer": "Bosch",
+        "connection": "Сетевые",
+        "price": 10950
+    },
+    "11" : {
+        "img" : "img/png/Perforator_1.png",
+        "name" : "Перфоратор bosch <br> BFG 3000",
+        "manufacturer": "Bosch",
+        "connection": "Аккумуляторные",
+        "price": 9300
+    }        
+};
