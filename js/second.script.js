@@ -547,7 +547,7 @@ let buttonBuy = document.querySelectorAll('.add_to_cart');
         }
     });
 
-
+    
 
 
 
