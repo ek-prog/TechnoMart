@@ -532,7 +532,7 @@ function clickElem() {
             localStorage.setItem('elem',JSON.stringify(elem));
               let jsString = JSON.stringify(elem);
               console.log(jsString);
-            document.cookie = "elem=jsString";
+            document.cookie = "elem=jsString;expires=15/10/2021 00:00:00";
             
         }
     });
@@ -547,7 +547,7 @@ let buttonBuy = document.querySelectorAll('.add_to_cart');
         }
     });
 
-    
+
 
 
 
