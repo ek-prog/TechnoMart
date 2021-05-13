@@ -529,9 +529,9 @@ function clickElem() {
         product.element.onclick = function() {
             elem.push(product); // добавляется кликнутый товар
             // console.log(elem);
-              // allElem = JSON.stringify(elem);
-            document.cookie = "elem=JSON.stringify(elem);expires=15/10/2021 00:00:00";
-            localStorage.setItem('elem', JSON.stringify(elem));
+              JSON.stringify(elem);
+            document.cookie = "elem=elem;expires=15/10/2021 00:00:00";
+            localStorage.setItem('elem',elem);
         }
     });
     // return elem;
@@ -541,7 +541,7 @@ let buttonBuy = document.querySelectorAll('.add_to_cart');
     buttonBuy.forEach(el =>{
         el.onclick = function(){
             clickElem();
-            console.log(elem);
+            // console.log(elem);
         }
     });
 
