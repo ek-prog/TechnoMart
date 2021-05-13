@@ -529,9 +529,9 @@ function clickElem() {
         product.element.onclick = function() {
             elem.push(product); // добавляется кликнутый товар
             // console.log(elem);
-              JSON.stringify(elem);
-            document.cookie = "elem=elem;expires=15/10/2021 00:00:00";
-            localStorage.setItem('elem',elem);
+              let jsString = JSON.stringify(elem);
+            document.cookie = "elem=jsString;expires=15/10/2021 00:00:00";
+            localStorage.setItem('elem',jsString);
         }
     });
     // return elem;
