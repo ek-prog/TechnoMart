@@ -519,37 +519,57 @@ document.querySelector('.button_second').onclick = function(){
 
 
 
-
-
+ let elem = [];
 function clickElem() {
-    let elem = [];
     products.forEach(product => {
         product.element.onclick = function() {
             elem.push(product); // добавляется кликнутый товар
-            // console.log(elem);
+            console.log(elem);
+             console.log(JSON.stringify(elem));
         }
     });
     return elem;
 }
 
 
-let cart = [];
 let buttonBuy = document.querySelectorAll('.add_to_cart');
-
-function addToCart(){
     buttonBuy.forEach(el =>{
         el.onclick = function(){
-            cart.push(clickElem());
-            
-            
+            clickElem();
         }
     });
-    return cart;
-}
-// console.log(el.dataset.art);
-addToCart();
-console.log(cart);
 
+
+
+
+// let cart;
+
+
+// function addToCart(){
+//     buttonBuy.forEach(el =>{
+//         el.addEventListener('click',() =>{
+//          clickElem();
+//          cart = JSON.stringify(elem);
+//          console.log(cart);
+//      });
+//  });
+//     // return cart;
+// }
+
+// addToCart();
+
+// console.log(el.dataset.art);
+
+// console.log(cart);
+
+// console.log(JSON.stringify(elem));
+
+
+
+
+// products.forEach(el =>{
+//     console.log(products);
+// });
 
 
 

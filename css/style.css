@@ -23,7 +23,9 @@ ul {
 b{
  font-weight: bold;
 }
-
+.content{
+	min-height: calc(100vh - 543px);
+}
 .all_red_button{
 	background-color: #ee3643!important;
 	font-size: 14px;
