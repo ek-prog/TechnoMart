@@ -531,7 +531,7 @@ function clickElem() {
             // console.log(elem);
               let jsString = JSON.stringify(elem);
             document.cookie = "elem=jsString;expires=15/10/2021 00:00:00";
-            localStorage.setItem('elem',jsString);
+            localStorage.setItem('elem',JSON.stringify(elem));
         }
     });
     // return elem;
