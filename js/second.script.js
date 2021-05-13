@@ -522,59 +522,63 @@ document.querySelector('.button_second').onclick = function(){
 
 
 
- let elem = [];
- let allElem;
-function clickElem() {
-    products.forEach(product => {
-        product.element.onclick = function() {
-            elem.push(product); // добавляется кликнутый товар
-            // console.log(elem);
-              let jsString = JSON.stringify(elem);
-            document.cookie = "elem=jsString;expires=15/10/2021 00:00:00";
-            localStorage.setItem('elem',JSON.stringify(jsString));
-        }
-    });
-    // return elem;
-}
-
-let buttonBuy = document.querySelectorAll('.add_to_cart');
-    buttonBuy.forEach(el =>{
-        el.onclick = function(){
-            clickElem();
-            // console.log(elem);
-        }
-    });
-
-
-
-
-
-
-
-
-
-// let buttonBuy = document.querySelectorAll('.add_to_cart');
-// let cart = {};
-
-
-// function addToCart(){
-//     buttonBuy.forEach(el =>{
-//         el.addEventListener('click',event =>{
-//           let articul = el.dataset.art;
-//           if(cart[articul] != undefined){
-//             cart[articul]++;
-//         }else{
-//             cart[articul] = 1;
+//  let elem = [];
+//  let allElem;
+// function clickElem() {
+//     products.forEach(product => {
+//         product.element.onclick = function() {
+//             elem.push(product); // добавляется кликнутый товар
+//             // console.log(elem);
+//               let jsString = JSON.stringify(elem);
+//               console.log(jsString);
+//             document.cookie = "elem=jsString;expires=15/10/2021 00:00:00";
+//             localStorage.setItem('elem',JSON.stringify(jsString));
 //         }
-//         console.log(cart);
-//        localStorage.setItem('cart', cart);
-//        document.cookie = "cart=cart;expires=15/10/2021 00:00:00";
 //     });
-//     // return cart;
-// });
+//     // return elem;
 // }
 
-// addToCart();
+// let buttonBuy = document.querySelectorAll('.add_to_cart');
+//     buttonBuy.forEach(el =>{
+//         el.onclick = function(){
+//             clickElem();
+//             // console.log(elem);
+//         }
+//     });
+
+
+
+
+
+
+
+
+
+let buttonBuy = document.querySelectorAll('.add_to_cart');
+let cart = {};
+
+
+function addToCart(){
+    buttonBuy.forEach(el =>{
+        el.addEventListener('click',event =>{
+          let articul = el.dataset.art;
+          if(cart[articul] != undefined){
+            cart[articul]++;
+        }else{
+            cart[articul] = 1;
+        }
+        
+       localStorage.setItem('cart', JSON.stringify(cart));
+       
+       let cartObj =  JSON.stringify(cart);
+       console.log(cartObj);
+       document.cookie = "cart=cartObj;expires=15/10/2021 00:00:00";
+    });
+    // return cart;
+});
+}
+
+addToCart();
 
 
 // addToCart();
