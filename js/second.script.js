@@ -571,7 +571,7 @@ function addToCart(){
         
         showCart();
         let cartObj =  JSON.stringify(cart);
-        document.cookie = "cart=cartObj;expires=15/10/2021 00:00:00";
+        document.cookie = "cart=cartObj;expires=01/07/2021 00:00:00";
     });
   });
 }
@@ -579,7 +579,7 @@ function addToCart(){
 addToCart();
 
 function checkCart(){
-        cart = JSON.parse(document.cookie = "cart=cartObj;expires=15/10/2021 00:00:00");
+        cart = JSON.parse(document.cookie = "cart=cartObj;expires=01/07/2021 00:00:00");
 }
 
 function showCart(){
@@ -587,7 +587,7 @@ function showCart(){
     for(let i in cart){
         output += i + '---'+cart[i]+'<br>';
     }
-    document.querySelector('.cart_products').innerHTML = output;
+    document.querySelector('.dropdown_cart').innerHTML = output;
 }
 
 

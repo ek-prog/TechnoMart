@@ -199,6 +199,23 @@ b{
 input.search::placeholder{
 	color: #fff;
 }
+.cart_icon:hover .dropdown_cart{
+	display: block;
+}
+.dropdown_cart{
+	display: none;
+	position: absolute;
+	top: 48px;
+	background-color: #fff;
+	width: 65%;
+	height: 200px;
+	z-index: 2;
+	
+
+}
+
+
+
 /*ВТОРАЯ ЛИНИЯ В ШАПКЕ*/
 
 .header_second_line{
