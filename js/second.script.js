@@ -571,7 +571,7 @@ function addToCart(){
         
         showCart();
         let cartObj =  JSON.stringify(cart);
-        document.cookie = "cart=cartObj;expires=01/07/2021 00:00:00";
+        document.cookie = "cart=" + cartObj; "expires=01/07/2021 00:00:00";
     });
   });
 }
