@@ -558,6 +558,7 @@ document.querySelector('.button_second').onclick = function(){
 let buttonBuy = document.querySelectorAll('.add_to_cart');
 let cart = {};
 
+
 function addToCart(){
     buttonBuy.forEach(el =>{
         el.addEventListener('click',event =>{
@@ -570,7 +571,9 @@ function addToCart(){
         
         showCart();
         
-        document.cookie = "cart=" + JSON.stringify(cart); "expires=01/07/2021 00:00:00";
+        let cartObj =  JSON.stringify(cart);
+        document.cookie = "cart" + cartObj; "expires=01/07/2021 00:00:00";
+            console.log(typeof cart);
         // checkCart();
     });
   });
