@@ -570,9 +570,10 @@ function addToCart(){
         }
         
         showCart();
-        checkCart();
+        
         // let cartObj =  JSON.stringify(cart);
         document.cookie = "cart=" + JSON.stringify(cart); "expires=01/07/2021 00:00:00";
+        checkCart();
     });
   });
 }
@@ -582,6 +583,7 @@ addToCart();
 function checkCart(){
     if(document.cookie = "cart=" + JSON.stringify(cart) != null){
         cart = JSON.parse(cart);
+        console.log(cart);
     }
 }
 
