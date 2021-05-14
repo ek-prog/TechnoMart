@@ -570,8 +570,8 @@ function addToCart(){
         }
         
         showCart();
-         let cartproducts = JSON.stringify(cart);
-        document.cookie = "cart=cartproducts;expires=01/07/2021 00:00:00";
+         let cartProducts = JSON.stringify(cart);
+        document.cookie = "cart=cartProducts;expires=01/07/2021 00:00:00";
     });
   });
 }
