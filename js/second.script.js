@@ -579,9 +579,10 @@ function addToCart(){
 addToCart();
 
 function checkCart(){
-        cart = JSON.parse(document.cookie = "cart=cartObj;expires=01/07/2021 00:00:00");
+    console.log(document.cookie = "erc=frgfs;expires=01/07/2021 00:00:00");
+        // cart = JSON.parse(document.cookie = "cart=cartObj;expires=01/07/2021 00:00:00");
 }
-
+checkCart();
 function showCart(){
     let output ='';
     for(let i in cart){
