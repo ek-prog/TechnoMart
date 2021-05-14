@@ -570,24 +570,17 @@ function addToCart(){
         }
         
         showCart();
-        
         let cartObj =  JSON.stringify(cart);
-        document.cookie = "cart" + cartObj; "expires=01/07/2021 00:00:00";
-            console.log(typeof cart);
-        // checkCart();
+        document.cookie = "cart=" + cartObj; "expires=01/07/2021 00:00:00";
     });
   });
 }
 
 addToCart();
 
-// function checkCart(){
-//     console.log(typeof cart);
-//     if(document.cookie != null){
-//         cart = JSON.parse(cart);
-
-//     }
-// }
+function checkCart(){
+        cart = JSON.parse(document.cookie = "cart=cartObj;expires=01/07/2021 00:00:00");
+}
 
 function showCart(){
     let output ='';
