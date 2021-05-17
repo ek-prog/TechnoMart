@@ -558,7 +558,7 @@ document.querySelector('.button_second').onclick = function(){
 let buttonBuy = document.querySelectorAll('.add_to_cart');
 let cart = {};
 let cartObj;
-
+showCart();
 
 function addToCart(){
     buttonBuy.forEach(el =>{
@@ -572,6 +572,7 @@ function addToCart(){
         cartObj =  JSON.stringify(cart);
         document.cookie = "cart=" + cartObj + "; expires=01/07/2021 00:00:00";
         console.log(cart);
+        checkCart(); 
         showCart();
         
     });
@@ -579,7 +580,7 @@ function addToCart(){
 }
 
 addToCart();
-checkCart(); 
+
 
 function checkCart(){
      if(document.cookie != null){
