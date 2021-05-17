@@ -579,9 +579,10 @@ function addToCart(){
 addToCart();
 
 function checkCart(){
-     console.log(document.cookie);
-        // cart = JSON.parse(cartObj);
-        // console.log(cart);
+     if(document.cookie != null){
+        cart = JSON.parse(cartObj);
+        console.log(cart);
+     }
 }
 
 
