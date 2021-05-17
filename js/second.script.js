@@ -559,6 +559,7 @@ let buttonBuy = document.querySelectorAll('.add_to_cart');
 let cart = {};
 let cartObj;
 
+
 function addToCart(){
     buttonBuy.forEach(el =>{
         el.addEventListener('click',event =>{
@@ -570,13 +571,15 @@ function addToCart(){
         }
         cartObj =  JSON.stringify(cart);
         document.cookie = "cart=" + cartObj + "; expires=01/07/2021 00:00:00";
-        // showCart();
-        checkCart();
+        console.log(cart);
+        showCart();
+        
     });
     });
 }
 
 addToCart();
+checkCart(); 
 
 function checkCart(){
      if(document.cookie != null){
@@ -587,13 +590,13 @@ function checkCart(){
 
 
 
-// function showCart(){
-//     let output ='';
-//     for(let i in cart){
-//         output += i + '---'+cart[i]+'<br>';
-//     }
-//     document.querySelector('.dropdown_cart').innerHTML = output;
-// }
+function showCart(){
+    let output ='';
+    for(let i in cart){
+        output += i + '---'+cart[i]+'<br>';
+    }
+    document.querySelector('.dropdown_cart').innerHTML = output;
+}
 
 
 // showCart();
