@@ -569,9 +569,8 @@ function addToCart(){
         }else{
             cart[articul] = 1;
         }
-        cartObj =  JSON.stringify(cart);
+        cartObj = JSON.stringify(cart);
         document.cookie = "cart=" + cartObj + "; expires=01/07/2021 00:00:00";
-        console.log(cart);
         checkCart(); 
         showCart();
         
@@ -579,13 +578,14 @@ function addToCart(){
     });
 }
 
+
 addToCart();
 
 
 function checkCart(){
      if(document.cookie != null){
         cart = JSON.parse(cartObj);
-        console.log(cart);
+        // console.log(cart);
      }
 }
 
