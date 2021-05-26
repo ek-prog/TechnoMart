@@ -564,8 +564,7 @@ let buttonBuy = document.querySelectorAll('.add_to_cart');
 let cart = {};
 let cartObj;
 let cookieBox;
-
-makeCookie();
+checkCart();
 showCart();
 
 
@@ -578,24 +577,22 @@ function addToCart(){
         }else{
             cart[articul] = 1;
         }
-        makeCookie();
+
+
+       cartObj = JSON.stringify(cart);
+       cookieBox = document.cookie = "cart=" + cartObj + "; expires=01/07/2021 00:00:00";
+        
         showCart();
         
     });
 
     });
-
+return cookieBox;
 }
 addToCart();
 
-function makeCookie(){
-        cartObj = JSON.stringify(cart);
-        cookieBox = document.cookie = "cart=" + cartObj + "; expires=01/07/2021 00:00:00";
-        checkCart();
-        console.log(cookieBox);
-}
-
 function checkCart(){
+    console.log(cookieBox);
      if(cookieBox != null){
         cart = JSON.parse(cartObj);
         console.log(cart);
