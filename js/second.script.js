@@ -564,9 +564,11 @@ let buttonBuy = document.querySelectorAll('.add_to_cart');
 let cart = {};
 let cartObj;
 let cookieBox;
-
+let dropdownCart = document.querySelector('.dropdown_cart');
 showCart();
 
+
+// checkCart();
 
 function addToCart(){
     buttonBuy.forEach(el =>{
@@ -583,43 +585,63 @@ function addToCart(){
         console.log(cookieBox);
         showCart();
     });
-
     });
-
-
 }
 addToCart();
 
 
-function checkCart(){
-     if(cookieBox != null){
-        cart = JSON.parse(cartObj);
-        console.log(cart);
+// function checkCart(){
+//      if(cookieBox != null){
+//         cart = JSON.parse(cartObj);
+//         console.log(cart);
 
-}
-}
+// }
+// }
+
 
 
 function showCart(){
-    checkCart();
+    // checkCart();
     let output ='';
-    for(let i in cart){
-        output += i + '---'+cart[i]+'<br>';
+    for(let key in cart){
+        console.log(cart);
+        output += '<div class="cart_block">';
+        output += '<button class="delete"></button>';
+        output += ' <img class="cart_img" src="'+products[key].img+'" аlt="Перфоратор">';
+        output += '<p class="cart_name">' + products[key].name + '</p>';
+        output += '<div class="cart_quantity">';
+        output += '<button class="minus">-</button>';
+        output += cart[key];
+        output += '<button class="plus">+</button>';
+        output += '</div>';
+        output += '<p class="cart_price">' + cart[key]*products[key].price + 'р'  + '</p>';;
+        output += '</div>';
+        output += '<hr class="hr_cart">';
     }
-    if(document.querySelector('.dropdown_cart')){document.querySelector('.dropdown_cart').innerHTML = output;}
 
-    // if(document.querySelector('.dropdown_cart')){
-    //     let cart = document.createElement('a');
-    //     cart.className = 'link_order';
-    //     cart.textContent = 'Оформить заказ'
-    //     document.querySelector('.dropdown_cart').appendChild(cart);
-    // }else{
-    //     dropdown_cart.textContent = 'Ваша корзина пуста';
-    //     cart.style.display="none";
+    if(dropdownCart){document.querySelector('.dropdown_cart').innerHTML = output;}
+checkTheOccupancy();
+
+}
+
+
+
+function checkTheOccupancy(){
+    let cartBox;
+    console.log(typeof(dropdownCart));
+    console.log(dropdownCart !== 0);
+        if(dropdownCart){
+       cartBox = document.createElement('a');
+        cartBox.className = 'link_order';
+        cartBox.textContent = 'Оформить заказ'
+        dropdownCart.appendChild(cartBox);
+     }//else {
+    //     dropdownCart.classList.add('empty_cart');
+    //     document.querySelector('.dropdown_cart').textContent = 'Ваша корзина пуста';
+    //     cartBox.style.display="none";
 
     // } 
 }
-
 
 // showCart();
 

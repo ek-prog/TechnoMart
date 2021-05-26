@@ -208,12 +208,14 @@ input.search::placeholder{
 	top: 48px;
 	background-color: #fff;
 	width: 65%;
-	height: 200px;
 	z-index: 2;
 	
 
 }
-
+.empty_cart{
+	height: 200px;
+	width: 200px;
+}
 
 
 /*ВТОРАЯ ЛИНИЯ В ШАПКЕ*/
@@ -1170,16 +1172,7 @@ input.search::placeholder{
 
 
 /*ВТОРАЯ СТРАНИЦА*/
-.link_order{
-    background-color: #63a63e;
-    width: 88%;
-    height: 200px;
-    bottom: 0;
-    position: absolute;
-    height: 24px;
-    text-align: center;
-    cursor: pointer;
-}
+
 /*ХЛЕБНЫЕ КРОШКИ*/
 ul.breadcrumbs{
 	position: relative;
@@ -1460,6 +1453,64 @@ ul.breadcrumbs li+li:before {
 
 
 
+
+
+/*КОРЗИНА*/
+.link_order{
+    background-color: #63a63e;
+    width: 88%;
+    height: 200px;
+    position: absolute;
+    height: 24px;
+    text-align: center;
+    cursor: pointer;
+}
+.cart_img{
+    width: 130px;
+    height: 100px;
+}
+.cart_name{
+    margin-top: 25px;
+}
+.cart_price{
+    width: 50%;
+    text-align: center;
+    font-size: 20px;
+    margin-top: 20px;
+    border: 1px #ee3643 solid;
+    margin: 0 auto;
+}
+.cart_quantity{
+    margin: 0 auto;
+    width: 140px;
+    margin-bottom: 10px;
+}
+.hr_cart{
+	margin-top: 10px;
+}
+.delete{
+    border: none;
+    background-color: #fff;
+    background-image: url(../img/svg/modal_close.svg);
+    background-repeat: no-repeat;
+    width: 21px;
+    height: 21px;
+    outline: none;
+    cursor: pointer;
+    margin-top: 45px;
+}
+.cart_block{
+	display: flex;
+    flex-wrap: wrap;
+}
+.minus,.plus{
+    width: 33px;
+    height: 33px;
+    border: none;
+    border-radius: 20px;
+    background-color: #63a63e;
+    margin: 0px 16px 0px 16px;
+}
 
 /*СТРАНИЦА ДОСТАВКА*/
 
