@@ -278,6 +278,12 @@
 .box_filter_sort_for_tel{
 	display: block;
 }
+.cart_icon:hover .dropdown_cart {
+    display: none;
+    }
+.dropdown_cart{
+	display: none;
+}
 }
 
 
