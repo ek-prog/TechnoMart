@@ -564,7 +564,7 @@ let buttonBuy = document.querySelectorAll('.add_to_cart');
 let cart = {};
 let cartObj;
 let cookieBox;
-checkCart();
+
 showCart();
 
 
@@ -577,22 +577,21 @@ function addToCart(){
         }else{
             cart[articul] = 1;
         }
-
-
        cartObj = JSON.stringify(cart);
        cookieBox = document.cookie = "cart=" + cartObj + "; expires=01/07/2021 00:00:00";
-        
+
+        console.log(cookieBox);
         showCart();
-        
     });
 
     });
-return cookieBox;
+
+
 }
 addToCart();
 
+
 function checkCart(){
-    console.log(cookieBox);
      if(cookieBox != null){
         cart = JSON.parse(cartObj);
         console.log(cart);
@@ -602,6 +601,7 @@ function checkCart(){
 
 
 function showCart(){
+    checkCart();
     let output ='';
     for(let i in cart){
         output += i + '---'+cart[i]+'<br>';
