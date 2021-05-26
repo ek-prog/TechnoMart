@@ -161,15 +161,26 @@ first = document.getElementById('first');
 second = document.getElementById('second');
 third = document.getElementById('third');
 
+if(first){
 first.addEventListener('click', function(){
 	toggleService();
 	openbox('first_service');
 });
+}
+
+
+if(second){
 second.addEventListener('click', function(){
 	toggleService();
 	openbox('second_service');
 });
+}
+
+if(third){
 third.addEventListener('click', function(){
 	toggleService();
 	openbox('thrird_service');
 });
+}
+
+

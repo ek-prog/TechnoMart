@@ -321,10 +321,12 @@ function paginationButton(page, items){
     });
     return button;
 }
-
+if(goodsElement){
 DisplayList(products, goodsElement, rows, currentPage);
+}
+if(paginationElement){
 setUpPagination(products, paginationElement, rows);
-
+}
 
 
 
@@ -335,10 +337,11 @@ function sortPriseUp() {
     });
     DisplayList(products, goodsElement, rows, currentPage);
 }
+if(document.querySelector('#btn_up')){
 document.querySelector('#btn_up').onclick = function () {
  sortPriseUp();
 }
-
+}
 
     let chboxxMin = document.getElementById('tel_sort_up');
 function checkCheckboxMin(inp){
@@ -355,10 +358,12 @@ function sortDown() {
     });
     DisplayList(products, goodsElement, rows, currentPage);
 }
+
+if(document.querySelector('#btn_down')){
 document.querySelector('#btn_down').onclick = function () {
     sortDown();
 }
-
+}
     let chboxxMax = document.getElementById('tel_sort_down');
 function checkCheckboxMax(inp){
     if(inp.checked){
@@ -558,6 +563,8 @@ document.querySelector('.button_second').onclick = function(){
 let buttonBuy = document.querySelectorAll('.add_to_cart');
 let cart = {};
 let cartObj;
+let cookieBox;
+checkCart();
 showCart();
 
 function addToCart(){
@@ -570,8 +577,9 @@ function addToCart(){
             cart[articul] = 1;
         }
         cartObj = JSON.stringify(cart);
-        document.cookie = "cart=" + cartObj + "; expires=01/07/2021 00:00:00";
-        checkCart(); 
+       cookieBox = document.cookie = "cart=" + cartObj + "; expires=01/07/2021 00:00:00";
+
+
         showCart();
         
     });
@@ -579,13 +587,16 @@ function addToCart(){
 }
 
 
-addToCart();
+
 
 
 function checkCart(){
-     if(document.cookie != null){
+     if(cookieBox != null){
         cart = JSON.parse(cartObj);
-        // console.log(cart);
+        addToCart();
+        console.log(cart);
+     }else{
+        addToCart();
      }
 }
 
@@ -596,7 +607,18 @@ function showCart(){
     for(let i in cart){
         output += i + '---'+cart[i]+'<br>';
     }
-    document.querySelector('.dropdown_cart').innerHTML = output;
+    if(document.querySelector('.dropdown_cart')){document.querySelector('.dropdown_cart').innerHTML = output;}
+
+    // if(document.querySelector('.dropdown_cart')){
+    //     let cart = document.createElement('a');
+    //     cart.className = 'link_order';
+    //     cart.textContent = 'Оформить заказ'
+    //     document.querySelector('.dropdown_cart').appendChild(cart);
+    // }else{
+    //     dropdown_cart.textContent = 'Ваша корзина пуста';
+    //     cart.style.display="none";
+
+    // } 
 }
 
 

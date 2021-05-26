@@ -1170,7 +1170,16 @@ input.search::placeholder{
 
 
 /*ВТОРАЯ СТРАНИЦА*/
-
+.link_order{
+    background-color: #63a63e;
+    width: 88%;
+    height: 200px;
+    bottom: 0;
+    position: absolute;
+    height: 24px;
+    text-align: center;
+    cursor: pointer;
+}
 /*ХЛЕБНЫЕ КРОШКИ*/
 ul.breadcrumbs{
 	position: relative;
