@@ -1667,7 +1667,7 @@ ul.breadcrumbs li+li:before {
     position: fixed;
     top: 10%;
     left: 18%;
-    width: 70%;
+    width: 800px;
     margin: 0 auto;
     background-color: #293449;
     border-radius: 65px;

@@ -269,6 +269,12 @@
 	.background_modal_login_registration{
 		    width: 50%;
 	}
+	.wrapper_modal_login_registration{
+    	width: 85%;
+    	left: 8%;
+
+	}
+
 }
 @media (max-width: 768px) {
 	.modal_describtion{
