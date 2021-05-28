@@ -123,6 +123,7 @@ $(document).ready(function(){
 
 
     let serviceButtons = document.getElementsByClassName('service_slider_control');
+    // console.log(serviceButtons);
     let activeService = document.getElementsByClassName('service_active');
 
     function toggleService(){
@@ -184,3 +185,51 @@ third.addEventListener('click', function(){
 }
 
 
+let loginButton = document.getElementById('login_button');
+console.log(loginButton);
+let registerButton = document.getElementById('register_button');
+console.log(registerButton);
+
+
+
+loginButton.addEventListener('click', function(){
+	document.getElementById('modal_register').style.display = 'none';
+	document.getElementById('modal_login').style.display = 'block';
+	loginButton.classList.add('focus_register');
+	registerButton.classList.remove('focus_register');
+
+
+});
+
+registerButton.addEventListener('click', function(){
+	document.getElementById('modal_login').style.display = 'none';
+	document.getElementById('modal_register').style.display = 'block';
+	registerButton.classList.add('focus_register');
+	loginButton.classList.remove('focus_register');
+
+});
+
+let form = document.querySelector('.wrapper_modal_login_registration');
+let openLogin = document.getElementById('button_login_open');
+openLogin.addEventListener('click', function(){
+	form.style.display="block";
+	document.getElementById('modal_register').style.display = 'none';
+	document.getElementById('modal_login').style.display = 'block';
+	registerButton.classList.remove('focus_register');
+	loginButton.classList.add('focus_register');
+	
+
+});
+
+
+let openRegister = document.getElementById('button_register_open');
+openRegister.addEventListener('click', function(){
+	form.style.display="block";
+	document.getElementById('modal_login').style.display = 'none';
+	document.getElementById('modal_register').style.display = 'block';
+	loginButton.classList.remove('focus_register');
+	registerButton.classList.add('focus_register');
+	
+	
+
+})

@@ -49,8 +49,8 @@
 						<p class="second_line_address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
 					</div>
 					<div class="second_line_btns">
-						<a class="button_second_line button_log_in" href="#">Войти</a>
-						<a class="button_second_line" href="#">Регистрация</a>
+						<a id="button_login_open" class="button_second_line button_log_in" href="#">Войти</a>
+						<a id="button_register_open" class="button_second_line" href="#">Регистрация</a>
 					</div>
 				</div>
 
@@ -419,6 +419,74 @@
 		<button onclick="closeForm(document.querySelector('.modal'))" class="modal_close" type="button"><span
 				class="hidden">Закрыть</span></button>
 	</section>
+
+<!-- ФОРМА Входа/Регистрации -->
+<section class="wrapper_modal_login_registration">
+	<button onclick="closeForm(document.querySelector('.wrapper_modal_login_registration'))" class="modal_close_login_register" type="button"><span class="hidden">Закрыть</span></button>
+<div class="wrapper_toggle_button">
+	<button id="login_button" class="toggle_button_login_registration">Вход</button>
+	<button id="register_button" class="focus_register toggle_button_login_registration">Регистрация</button>
+</div>
+	<div class="modal_login_registration">
+	    <div class="form_container">
+	    	<div class="modal_describtion">
+	    	<h1>Добро пожаловать в магазин стройматериалов "ТЕХНОМАРТ"</h1>
+	    	<p>Огромный выбор товаров для ремонта и строительства</p>
+	        </div>
+
+		<form id="modal_register"class="background_modal_login_registration" action="#" method="post">
+			<h2>Регистрация</h2>
+
+			<div class="login_registration_box">
+				<label for="user-login">Ваше имя:</label>
+				<input type="text" name="username" placeholder="Имя Фамилия">
+			</div>
+			<div class="login_registration_box">
+				<label for="user-login">Ваш e-mail:</label>
+				<input type="text" name="username" placeholder="email@example.com">
+			</div>
+			<div class="login_registration_box">
+				<label for="user-tel">Ваш телефон</label>
+				<input type="number" name="username" placeholder="+7-904-136-42-68">
+			</div>
+			
+			<button type="submit" class="modal_register_button">Зарегистрироваться</button>
+		</form>
+
+
+
+		<form id="modal_login" class="background_modal_login_registration" action="#" method="post">
+			<h2>Вход</h2>
+
+			<div class="login_registration_box">
+				<label for="user-login">Ваше имя:</label>
+				<input type="text" name="username" placeholder="Имя Фамилия">
+			</div>
+			<div class="login_registration_box">
+				<label for="user-login">Ваш e-mail:</label>
+				<input type="text" name="username" placeholder="email@example.com">
+			</div>
+			<p class="modal_or">или</p>
+			<div class="login_registration_box_second login_registration_box">
+				<label for="user-tel">Ваш телефон</label>
+				<input type="number" name="username" placeholder="+7-904-136-42-68">
+			</div>
+			
+			<button type="submit" class="modal_register_button">Войти</button>
+		</form>
+<!-- 		<button onclick="closeForm(document.querySelector('.modal'))" class="modal_close" type="button"><span
+	class="hidden">Закрыть</span></button> -->
+	    </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
 	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
 <!-- 	<script defer src="libs/SimpleAdaptiveSlider/simple-adaptive-slider.js"></script> -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

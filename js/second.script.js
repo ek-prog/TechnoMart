@@ -560,11 +560,12 @@ document.querySelector('.button_second').onclick = function(){
 
 
 
-let buttonBuy = document.querySelectorAll('.add_to_cart');
-let cart = {};
-let cartObj;
-let cookieBox;
-let dropdownCart = document.querySelector('.dropdown_cart');
+let buttonBuy = document.querySelectorAll('.add_to_cart');//кнопка купить
+let cart = {}; //корзина
+let cartObj; //для JSON
+let cookieBox; //для cookie
+let dropdownCart = document.querySelector('.dropdown_cart'); //всплывающая корзина
+
 showCart();
 
 
@@ -630,6 +631,7 @@ function checkTheOccupancy(){
     let cartBox;
     console.log(typeof(dropdownCart));
     console.log(dropdownCart !== 0);
+    console.log(dropdownCart);
         if(dropdownCart){
        cartBox = document.createElement('a');
         cartBox.className = 'link_order';
