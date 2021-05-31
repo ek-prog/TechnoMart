@@ -1316,7 +1316,7 @@ ul.breadcrumbs li+li:before {
 .choose_items input{
 	margin-right: 10px;
 }
-.choose_items button{
+.view{
 	border: 1px solid #e5e5e5;
     padding: 12px 40px 12px 40px;
     text-transform: uppercase;
@@ -1324,8 +1324,46 @@ ul.breadcrumbs li+li:before {
     background: #fff;
     outline: none;
 }
+.cost_range_box{
+	margin-top: 33px;
+}
 
+/* для элемента input c type="checkbox" */
+.custom_checkbox input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
 
+.custom_checkbox p::before {
+    content: '';
+    display: inline-block;
+    width: 23px;
+    height: 23px;
+    background-image: url(../img/png/checkbox-off.png);
+    margin-right: 9px;
+}
+
+/* стили для чекбокса, находящегося в состоянии checked */
+.custom_checkbox input:checked+p::before {
+  background-image: url(../img/png/checkbox-on.png);
+}
+.custom_checkbox_2 input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+.custom_checkbox_2 p::before {
+    content: '';
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background-image: url(../img/png/radio-off.png);
+    margin-right: 9px;
+}
+.custom_checkbox_2 input:checked+p::before {
+  background-image: url(../img/png/radio-on.png);
+}
 /*КАТАЛОГ ТОВАРОВ*/
 .box_output_goods_ul{
 	display: flex;
@@ -1879,80 +1917,89 @@ border-bottom-left-radius: 15px;
 */
 
 
-
-
-
-
-
-
-
-
-.box_cost_range{
-	margin-bottom: 60px;
-	margin-top: 30px;
-}
 .slider_cost {
-	-webkit-appearance: none;
-	margin-top: 20px;
-	border-radius: 20px;
-	height: 5px;
-	position: absolute;
-	background-color: #63a63e;
-	outline: none;
+  pointer-events: none;
+  margin: 0px;
+  cursor: pointer;
+  padding-left: 30%;
+  padding-right: 30%;
+  background-color: #32425c;
+  box-sizing: border-box;
 }
 
-.slider_cost input {
-	pointer-events: none;
-	position: absolute;
-	overflow: hidden;
-	left: 25%;
-	top: 15px;
-	width: 50%;
-	outline: none;
-	height: 18px;
-	margin: 0;
-	padding: 0;
+
+
+.thumb {
+  cursor: pointer;
+  border-color: #32425c;
+  border-style: solid;
+  background-color: #f2f6f8;
+  border-radius: 50%;
+  position: absolute;
 
 }
 
-.slider_cost::-webkit-slider-thumb {
-	-webkit-appearance: none;
-	appearance: none;
-	border-radius: 20px;
-	width: 25px;
-	height: 25px;
-	background-color: #C0C0C0;
-	opacity: 0.8;
-	cursor: pointer;
-
-	pointer-events: all;
-	position: relative;
-	z-index: 1;
-	outline: 0;
+.track {
+  pointer-events: none;
+  height: 100%;
+  background-color: #D5E9F3;
 }
 
-.slider_cost::-moz-range-thumb {
-	width: 20px;
-	height: 20px;
-	cursor: pointer;
-	pointer-events: all;
-	position: relative;
-	z-index: 10;
-	-moz-appearance: none;
-	width: 9px;
+.container_cost {
+    position: relative;
+    height: 30px;
+    width: 230px;
+    margin: 101px 23px 18px 15px;
 }
 
-.slider_cost input::-moz-range-track {
-	position: relative;
-	z-index: -1;
-	border: 0;
+.output {
+  pointer-events: none;
+  margin: 0;
+  width: 40px;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 50% 50% 0 50%;
+  background-color: #D5E9F3;
+  text-align: center;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  position: absolute;
+  top: -45px;
+  /*left:45px*/
+  
+  ;
 }
-.slider_cost input:last-of-type::-moz-range-track {
-	-moz-appearance: none;
-	background: none transparent;
-	border: 0;
 
+.output p {
+    pointer-events: none;
+    font-size: 15px;
+    color: #0a1a17;
+    font-weight: bold;
+    text-align: center;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
 }
-.slider_cost input[type=range]::-moz-focus-outer {
-	border: 0;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

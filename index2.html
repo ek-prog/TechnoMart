@@ -113,50 +113,61 @@
 					<div class="box_filter_paragraph">
 						<p>Фильтр:</p>
 					</div>
-					<div class="box_cost_range">
-						<p>Цена:</p>
-						<input type="range" min="12" max="2175" value="12" class="slider_cost" id="lower">
-						<input type="range" min="12" max="2175" value="2175" class="slider_cost" id="higher">
+				<div class="cost_range_box">
+					<h3>Цена:</h3>
+					<div class="container_cost">
+
+						<div class="slider_cost">
+							<div class="track"></div>
+						</div>
+						<div class="output o0"> </div>
+						<div class="thumb t0"></div>
+
+						<div class="output o1"> </div>
+						<div class="thumb t1"></div>
 					</div>
+					<button onclick="pushElementsConect()" type="button" class="click view">Показать</button>
+				</div>
+					
 					<div class="choose_items choose_items_manufacterer">
 						<form action="#">
 							<h3>Производители</h3>
-							<label>
-								<p><input class="manufacturer" name="Bosch"
-										type="checkbox" value="Bosch">Bosch</p>
+							<label class="custom_checkbox">
+								<input class="manufacturer" name="Bosch"
+										type="checkbox" value="Bosch"><p>Bosch</p>
 							</label>
-							<label>
-								<p><input class="manufacturer" name="Интерскол"
-										type="checkbox" value="Интерскол">Интерскол</p>
+							<label class="custom_checkbox">
+								<input class="manufacturer" name="Интерскол"
+										type="checkbox" value="Интерскол"><p>Интерскол</p>
 							</label>
-							<label>
-								<p><input  class="manufacturer" name="Makita"
-										type="checkbox" value="Makita">Makita</p>
+							<label class="custom_checkbox">
+								<input  class="manufacturer" name="Makita"
+										type="checkbox" value="Makita"><p>Makita</p>
 							</label>
-							<label>
-								<p><input class="manufacturer" name="DeWALT"
-										type="checkbox" value="DeWALT">DeWALT</p>
+							<label class="custom_checkbox">
+								<input class="manufacturer" name="DeWALT"
+										type="checkbox" value="DeWALT"><p>DeWALT</p>
 							</label>
-							<label>
-								<p><input class="manufacturer" name="Hitachi"
-										type="checkbox" value="Hitachi">Hitachi
+							<label class="custom_checkbox">
+								<input class="manufacturer" name="Hitachi"
+										type="checkbox" value="Hitachi"><p>Hitachi
 								</p>
 							</label>
-							<button onclick="pushElements()" type="button" class="click">Показать</button>
+							<button onclick="pushElements()" type="button" class="click view">Показать</button>
 						</form>
 						<!-- <hr style="margin-top: 10px;"> -->
 					</div>
 					<div class="choose_items">
 						<form action="#">
 							<h3>Тип питания</h3>
-							<label>
-								<p><input class="conection" name="Аккумуляторные" type="checkbox" value="Аккумуляторные">Аккумуляторные
+							<label class="custom_checkbox_2">
+								<input class="conection" name="Аккумуляторные" type="checkbox" value="Аккумуляторные"><p>Аккумуляторные
 								</p>
 							</label>
-							<label>
-								<p><input class="conection" name="Сетевые" type="checkbox" value="Сетевые">Сетевые</p>
+							<label class="custom_checkbox_2">
+								<input class="conection" name="Сетевые" type="checkbox" value="Сетевые"><p>Сетевые</p>
 							</label>
-							<button onclick="pushElementsConect()" type="button" class="click">Показать</button>
+							<button onclick="pushElementsConect()" type="button" class="click view">Показать</button>
 						</form>
 					</div>
 
