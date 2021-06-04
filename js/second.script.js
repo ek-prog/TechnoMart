@@ -582,7 +582,7 @@ let arrayCart = [];
 
 
 
-// checkCart();
+checkCart();
 
 function addToCart(){
     buttonBuy.forEach(el =>{
@@ -615,13 +615,13 @@ addToCart();
  
 
 
-// function checkCart(){
-//      if(cookieBox != null){
-//         cart = JSON.parse(cartObj);
-//         console.log(cart);
+function checkCart(){
+     if(cookieBox != null){
+        cart = JSON.parse(cartObj);
+        console.log(cart);
 
-// }
-// }
+}
+}
 
 
 
