@@ -582,7 +582,7 @@ let arrayCart = [];
 
 
 
-checkCart();
+// checkCart();
 
 function addToCart(){
     buttonBuy.forEach(el =>{
@@ -597,8 +597,7 @@ function addToCart(){
         arrayCart.push(el.dataset.id, el.dataset.name, el.dataset.price);
 
         setCookie();
-       checkCart();
-
+       
 
        // console.log(cart);
        // console.log(arrayCart);
@@ -613,18 +612,20 @@ addToCart();
 function setCookie(){
     cartObj = JSON.stringify(cart);
     cookieBox = document.cookie = "cart=" + cartObj + "; expires=10/07/2021 00:00:00";
+    // console.log(cartObj);
+    
 }
 
-console.log(cookieBox);
-console.log(cart);
 
-function checkCart(){
-     if(cookieBox != null){
-        cart = JSON.parse(cartObj);
-        console.log(cart);
 
-}
-}
+// function checkCart(){
+//     console.log(cartObj);
+//      if(cookieBox != null){
+//         cart = JSON.parse(cartObj);
+//         console.log(cart);
+
+// }
+// }
 
 
 
