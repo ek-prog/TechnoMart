@@ -600,8 +600,8 @@ function addToCart(){
        
 
 
-       console.log(cart);
-       console.log(arrayCart);
+       // console.log(cart);
+       // console.log(arrayCart);
        // document.querySelector('.dropdown_cart').innerHTML += el.getAttribute('data-name');
 
         // showCart();
