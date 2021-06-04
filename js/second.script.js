@@ -596,9 +596,8 @@ function addToCart(){
         
         arrayCart.push(el.dataset.id, el.dataset.name, el.dataset.price);
 
-
-        cartObj = JSON.stringify(cart);
-        cookieBox = document.cookie = "cart=" + cartObj + "; expires=10/07/2021 00:00:00";
+        setCookie();
+       
 
 
        console.log(cart);
@@ -611,13 +610,17 @@ function addToCart(){
 }
 addToCart();
 
+function setCookie(){
+    cartObj = JSON.stringify(cart);
+    cookieBox = document.cookie = "cart=" + cartObj + "; expires=10/07/2021 00:00:00";
+}
 
- 
-
+console.log(cookieBox);
+console.log(cart);
 
 function checkCart(){
      if(cookieBox != null){
-        cart = JSON.parse(cartObj);
+        cart = JSON.parse(cookieBox);
         console.log(cart);
 
 }
