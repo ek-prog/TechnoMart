@@ -597,7 +597,7 @@ function addToCart(){
         arrayCart.push(el.dataset.id, el.dataset.name, el.dataset.price);
 
         setCookie();
-       
+       checkCart();
 
 
        // console.log(cart);
@@ -620,7 +620,7 @@ console.log(cart);
 
 function checkCart(){
      if(cookieBox != null){
-        cart = JSON.parse(cookieBox);
+        cart = JSON.parse(cartObj);
         console.log(cart);
 
 }
