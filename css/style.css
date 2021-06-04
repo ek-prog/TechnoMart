@@ -1218,6 +1218,9 @@ ul.breadcrumbs li+li:before {
 
 
 /*ТОВАРЫ И СОРТИРОВКА*/
+
+
+
 /*РАЗДЕЛЕНИЕ БЛОКА НА ГРИДАХ*/
 .wrapper_goods{
 	display: grid;
@@ -1252,6 +1255,65 @@ ul.breadcrumbs li+li:before {
 	background-color: #f7f3ec;
 	padding: 26px;
 }
+
+/*Попап "ТОВАР ДОБАВЛЕН В КОРЗИНУ"*/
+	.pop_up_notification{
+    position: fixed;
+    z-index: 999;
+    display: none;
+    color: #000;
+    background-color: #f8f7f4;
+    width: 620px;
+    padding: 35px 0 35px 0;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 20px 40px rgb(0 0 0 / 75%);
+}
+.pop_up_notification p{
+	text-align: center;
+	font-size: 22px;
+}
+.pop_up_notification p::before{
+	content: '';
+    display: inline-block;
+    width: 66px;
+    height: 66px;
+    background-image: url(../img/svg/popup_znak.svg);
+    margin-right: 30px;
+    margin-bottom: -20px;
+}
+.pop_up_notification_button{
+	display: flex;
+	justify-content: center;
+	margin-top: 25px;
+	background-color: #f1f1f1;
+	padding: 45px 0 45px 0px;
+}
+.pop_up_notification_button button:last-child{
+	margin-left: 15px;
+}
+.pop_up_notification_button button:last-child:hover{
+	background-color:#32425c!important ;
+	color: #fff;
+}
+.pop_up_notification_button a{
+	padding: 13px 60px 13px 60px;
+}
+.pop_up_notification_button a:hover{
+	background-color:#63a63e!important ;
+}
+.pop_up_button_order{
+	border: none;
+	color: #fff;
+
+}
+.pop_up_button_continue_shopping{
+	border: none;
+    background-color: #000;
+	background-color: #ffffff!important;
+}
+
 
 
 
@@ -1346,7 +1408,9 @@ ul.breadcrumbs li+li:before {
 
 /* стили для чекбокса, находящегося в состоянии checked */
 .custom_checkbox input:checked+p::before {
-  background-image: url(../img/png/checkbox-on.png);
+    background-image: url(../img/png/checkbox-on.png);
+    width: 27px;
+    height: 23px;
 }
 .custom_checkbox_2 input {
   position: absolute;

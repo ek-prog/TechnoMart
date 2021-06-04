@@ -29,7 +29,7 @@ function clickToggleNav(){
 		};
 	}
 }
-clickToggleNav();
+// clickToggleNav();
 
 
 //Слайдер

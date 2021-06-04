@@ -32,7 +32,7 @@ function clickToggleNav(){
         };
     }
 }
-clickToggleNav();
+// clickToggleNav();
 
 // ВЫВОД ТОВАРОВ НА СТРАНИЦУ
 
@@ -43,7 +43,7 @@ let products = [
         manufacturer: 'Bosch',
         connection: 'Аккумуляторные',
         price: 13950,
-        data: 1
+        id: 234
     },
     {
         img: 'img/png/Perforator_2.png',
@@ -51,7 +51,7 @@ let products = [
         manufacturer: 'Makita',
         connection: 'Сетевые',
         price: 22000,
-        data: 2
+        id: 432146
     },
     {
         img: 'img/png/Perforator_4.png',
@@ -59,7 +59,7 @@ let products = [
         manufacturer: 'Metabo',
         connection: 'Аккумуляторные',
         price: 12200,
-        data: 3
+        id: 21
     },
     {
         img: 'img/png/Perforator_1.png',
@@ -67,7 +67,7 @@ let products = [
         manufacturer: 'Hitachi',
         connection: 'Сетевые',
         price: 27750,
-        data: 4
+        id: 35654
     },
     {
         img: 'img/png/Perforator_2.png',
@@ -75,7 +75,7 @@ let products = [
         manufacturer: 'Makita',
         connection: 'Аккумуляторные',
         price: 10400,
-        data: 5
+        id: 4321113
     },
     {
         img: 'img/png/Perforator_3.png',
@@ -83,7 +83,7 @@ let products = [
         manufacturer: 'Metabo',
         connection: 'Сетевые',
         price: 13700,
-        data: 6
+        id: 51
     },
     {
         img: 'img/png/Perforator_3.png',
@@ -91,7 +91,7 @@ let products = [
         manufacturer: 'DeWALT',
         connection: 'Аккумуляторные',
         price: 12200,
-        data: 7
+        id: 60
     },
     {
         img: 'img/png/Perforator_4.png',
@@ -99,7 +99,7 @@ let products = [
         manufacturer: 'Bosch',
         connection: 'Аккумуляторные',
         price: 10300,
-        data: 8
+        id: 321
     },
     {
         img: 'img/png/Perforator_3.png',
@@ -107,7 +107,7 @@ let products = [
         manufacturer: 'Metabo',
         connection: 'Сетевые',
         price: 12200,
-        data: 9
+        id: 245
     },
     {
         img: 'img/png/Perforator_1.png',
@@ -115,7 +115,7 @@ let products = [
         manufacturer: 'Bosch',
         connection: 'Аккумуляторные',
         price: 12352,
-        data: 10
+        id: 9
     },
     {
         img: 'img/png/Perforator_2.png',
@@ -123,7 +123,7 @@ let products = [
         manufacturer: 'DeWALT',
         connection: 'Сетевые',
         price: 15666,
-        data: 11
+        id: 352
     },
     {
         img: 'img/png/Perforator_3.png',
@@ -131,7 +131,7 @@ let products = [
         manufacturer: 'Интерскол',
         connection: 'Аккумуляторные',
         price: 22700,
-        data: 12
+        id: 6543
     },
     {
         img: 'img/png/Perforator_1.png',
@@ -139,7 +139,7 @@ let products = [
         manufacturer: 'Bosch',
         connection: 'Сетевые',
         price: 13950,
-        data: 13
+        id: 9632
     },
     {
         img: 'img/png/Perforator_2.png',
@@ -147,7 +147,7 @@ let products = [
         manufacturer: 'Makita',
         connection: 'Аккумуляторные',
         price: 22000,
-        data: 14
+        id: 7853
 
     },
     {
@@ -156,7 +156,7 @@ let products = [
         manufacturer: 'Metabo',
         connection: 'Аккумуляторные',
         price: 12200,
-        data: 15
+        id: 267654
     }
     // {
     //     img: 'img/png/Perforator_1.png',
@@ -259,15 +259,15 @@ function DisplayList(items, wrapper, rows_per_page, page){
 
 function createProduct(product) {
     const element = document.createElement('li');
-    element.className = 'link_goods';
-
+    element.className = "link_goods";
+    // element.setAttribute(`data-img="${product.img}" data-name="${product.name}" data-price="${product.price}"`);
     element.innerHTML = `
         <img class="popular_goods_item_photo" src="${product.img}" width="218" height="170" аlt="Перфоратор">
         <p>${product.name}</p>
         <p><span class="old_cost">${product.price}</span></p>
         <a class="popular_goods_price" href="#">${product.price}P.</a>
         <div class="add_popular_goods_second_str">
-            <button class="btn_popular_goods btn_popular_goods_first add_to_cart" data-art="${product.data}">Купить</button>
+            <button class="btn_popular_goods btn_popular_goods_first add_to_cart" data-id="${product.id}" data-name="${product.name}" data-price="${product.price}">Купить</button>
             <button class="btn_popular_goods btn_popular_goods_second">B закладки</button>
         </div>
     `;
@@ -279,6 +279,7 @@ function createProduct(product) {
 function loadProducts() {
     products.forEach(product => {
         product.element = createProduct(product);
+
     });
 }
 loadProducts(); 
@@ -565,8 +566,20 @@ let cart = {}; //корзина
 let cartObj; //для JSON
 let cookieBox; //для cookie
 let dropdownCart = document.querySelector('.dropdown_cart'); //всплывающая корзина
+let arrayCart = [];
+// showCart();
+// console.log(products);
 
-showCart();
+
+// buttonBuy.forEach(el=>{
+//     el.addEventListener('click', function(){
+//      console.log(el.getAttribute('data-id')); 
+//      console.log(el.getAttribute('data-name'));
+//      console.log(el.getAttribute('data-price'));   
+// });
+// })
+
+
 
 
 // checkCart();
@@ -574,21 +587,32 @@ showCart();
 function addToCart(){
     buttonBuy.forEach(el =>{
         el.addEventListener('click',event =>{
-          let articul = el.dataset.art;
-          if(cart[articul] != undefined){
+          let articul = el.dataset.id;
+        if(cart[articul] != undefined){
             cart[articul]++;
         }else{
             cart[articul] = 1;
         }
-       cartObj = JSON.stringify(cart);
-       cookieBox = document.cookie = "cart=" + cartObj + "; expires=01/07/2021 00:00:00";
+        
+        arrayCart.push(el.dataset.id, el.dataset.name, el.dataset.price);
 
-        console.log(cookieBox);
-        showCart();
+
+        cartObj = JSON.stringify(cart);
+        cookieBox = document.cookie = "cart=" + cartObj + "; expires=10/07/2021 00:00:00";
+
+
+       console.log(cart);
+       console.log(arrayCart);
+       // document.querySelector('.dropdown_cart').innerHTML += el.getAttribute('data-name');
+
+        // showCart();
     });
     });
 }
 addToCart();
+
+
+ 
 
 
 // function checkCart(){
@@ -601,51 +625,69 @@ addToCart();
 
 
 
-function showCart(){
-    // checkCart();
-    let output ='';
-    for(let key in cart){
-        console.log(cart);
-        output += '<div class="cart_block">';
-        output += '<button class="delete"></button>';
-        output += ' <img class="cart_img" src="'+products[key].img+'" аlt="Перфоратор">';
-        output += '<p class="cart_name">' + products[key].name + '</p>';
-        output += '<div class="cart_quantity">';
-        output += '<button class="minus">-</button>';
-        output += cart[key];
-        output += '<button class="plus">+</button>';
-        output += '</div>';
-        output += '<p class="cart_price">' + cart[key]*products[key].price + 'р'  + '</p>';;
-        output += '</div>';
-        output += '<hr class="hr_cart">';
-    }
+// function showCart(){
+//     // checkCart();
+//     let output ='';
+//     for(let key in cart){
+//         console.log(cart)
+//         // console.log(products[key].name);
+//         output += '<div class="cart_block">';
+//         output += '<button class="delete"></button>';
+//         output += ' <img class="cart_img" src="'+products[key].img+'" аlt="Перфоратор">';
+//         output += '<p class="cart_name">' + products[key].name + '</p>';
+//         output += '<div class="cart_quantity">';
+//         output += '<button class="minus">-</button>';
+//         output += cart[key];
+//         output += '<button class="plus">+</button>';
+//         output += '</div>';
+//         output += '<p class="cart_price">' + cart[key]*products[key].price + 'р'  + '</p>';;
+//         output += '</div>';
+//         output += '<hr class="hr_cart">';
+//     }
 
-    if(dropdownCart){document.querySelector('.dropdown_cart').innerHTML = output;}
-checkTheOccupancy();
+//     if(dropdownCart){document.querySelector('.dropdown_cart').innerHTML = output;}
+// // checkTheOccupancy();
 
-}
+// }
 
 
 
-function checkTheOccupancy(){
-    let cartBox;
-    console.log(typeof(dropdownCart));
-    console.log(dropdownCart !== 0);
-    console.log(dropdownCart);
-        if(dropdownCart){
-       cartBox = document.createElement('a');
-        cartBox.className = 'link_order';
-        cartBox.textContent = 'Оформить заказ'
-        dropdownCart.appendChild(cartBox);
-     }//else {
+// function checkTheOccupancy(){
+//     let cartBox;
+    // console.log(typeof(dropdownCart));
+    // console.log(dropdownCart !== 0);
+    // console.log(dropdownCart);
+       //  if(dropdownCart){
+       // cartBox = document.createElement('a');
+       //  cartBox.className = 'link_order';
+       //  cartBox.textContent = 'Оформить заказ'
+       //  dropdownCart.appendChild(cartBox);
+     //}else {
     //     dropdownCart.classList.add('empty_cart');
     //     document.querySelector('.dropdown_cart').textContent = 'Ваша корзина пуста';
     //     cartBox.style.display="none";
 
     // } 
-}
+// }
 
 // showCart();
+
+
+//  buttonBuy.forEach(el =>{
+//         el.addEventListener('click', function(){
+//            document.querySelector('.pop_up_notification').style.display="block";
+
+// });
+// })
+
+// let btnContinueShopping = document.querySelector('.pop_up_button_continue_shopping');
+// btnContinueShopping.onclick = function(){
+//     document.querySelector('.pop_up_notification').style.display="none";
+// }
+
+
+
+
 
 
 
@@ -686,7 +728,7 @@ function checkTheOccupancy(){
 
 let inputsRy = {
   sliderWidth: 229,
-  minRange: 0,
+  minRange: 4000,
   maxRange: 50000, 
   outputWidth:40, // output width
   thumbWidth: 18, // thumb width
