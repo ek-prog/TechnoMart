@@ -617,12 +617,6 @@ function setCookie(){
 }
 
 
-
-
-
-
-
-
 function readCookie (name) {
     var searchName = name + '=';
     var cookies = document.cookie.split(';');
@@ -637,7 +631,25 @@ function readCookie (name) {
 }
 readCookie("cart");
 
-console.log(readCookie("cart"));
+
+document.querySelector('.dropdown_cart').innerHTML = readCookie("cart");
+
+
+// function checkTheOccupancy(){
+//     if(dropdownCart !== null){
+//        cartBox = document.createElement('a');
+//         cartBox.className = 'link_order';
+//         cartBox.textContent = 'Оформить заказ'
+//         dropdownCart.appendChild(cartBox);
+//      }else {
+//         dropdownCart.classList.add('empty_cart');
+//         document.querySelector('.dropdown_cart').textContent = 'Ваша корзина пуста';
+//         cartBox.style.display="none";
+
+//     } 
+// }
+// checkTheOccupancy();
+
 
 
 // function checkCart(){
@@ -678,23 +690,7 @@ console.log(readCookie("cart"));
 
 
 
-// function checkTheOccupancy(){
-//     let cartBox;
-    // console.log(typeof(dropdownCart));
-    // console.log(dropdownCart !== 0);
-    // console.log(dropdownCart);
-       //  if(dropdownCart){
-       // cartBox = document.createElement('a');
-       //  cartBox.className = 'link_order';
-       //  cartBox.textContent = 'Оформить заказ'
-       //  dropdownCart.appendChild(cartBox);
-     //}else {
-    //     dropdownCart.classList.add('empty_cart');
-    //     document.querySelector('.dropdown_cart').textContent = 'Ваша корзина пуста';
-    //     cartBox.style.display="none";
 
-    // } 
-// }
 
 // showCart();
 
