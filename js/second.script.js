@@ -596,11 +596,11 @@ function addToCart(){
         
         arrayCart.push(el.dataset.id, el.dataset.name, el.dataset.price);
 
-        setCookie();
+        // setCookie();
        
 
-       // console.log(cart);
-       // console.log(arrayCart);
+       console.log(cart);
+       console.log(arrayCart);
        // document.querySelector('.dropdown_cart').innerHTML += el.getAttribute('data-name');
 
         // showCart();
@@ -609,13 +609,40 @@ function addToCart(){
 }
 addToCart();
 
-function setCookie(){
-    cartObj = JSON.stringify(cart);
-    cookieBox = document.cookie = "cart=" + cartObj + "; expires=10/07/2021 00:00:00";
-    // console.log(cartObj);
+// function setCookie(){
+//     cartObj = JSON.stringify(cart);
+//     cookieBox = document.cookie = "cart=" + cartObj + "; expires=10/07/2021 00:00:00";
+//     // console.log(cartObj);
     
+// }
+
+
+
+function setCookie(cname, cvalue, exdays) {
+  var d = new Date();
+  d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+  var expires = "expires="+d.toUTCString();
+  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
 }
 
+setCookie("cart", 22, 365);
+
+
+function readCookie (name) {
+    var searchName = name + '=';
+    var cookies = document.cookie.split(';');
+    for(var i=0; i < cookies.length; i++) {
+        var c = cookies[i];
+        while (c.charAt(0) == ' ')
+            c = c.substring(1, c.length);
+        if (c.indexOf(searchName) == 0)
+            return c.substring(searchName.length, c.length);
+    }
+    return null;
+}
+readCookie("cart");
+
+console.log(readCookie("cart"));
 
 
 // function checkCart(){
