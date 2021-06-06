@@ -611,7 +611,7 @@ addToCart();
 
 function setCookie(){
     cartObj = JSON.stringify(cart);
-    cookieBox = document.cookie = "cart=" + cartObj + "; expires=10/07/2021 00:00:00";
+    document.cookie = "cart=" + cartObj + "; expires=10/07/2021 00:00:00";
     // console.log(cartObj);
     
 }
@@ -635,9 +635,9 @@ function readCookie (name) {
     }
     return null;
 }
-readCookie("cookieBox");
+readCookie("cart");
 
-console.log(readCookie("cookieBox"));
+console.log(readCookie("cart"));
 
 
 // function checkCart(){
