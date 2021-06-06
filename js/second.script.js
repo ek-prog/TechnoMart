@@ -625,7 +625,7 @@ function setCookie(cname, cvalue, exdays) {
   document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
 }
 
-setCookie("cart", 22, 365);
+setCookie("cartProducts", cart, 365);
 
 
 function readCookie (name) {
@@ -640,9 +640,9 @@ function readCookie (name) {
     }
     return null;
 }
-readCookie("cart");
+readCookie("cartProducts");
 
-console.log(readCookie("cart"));
+console.log(readCookie("cartProducts"));
 
 
 // function checkCart(){
