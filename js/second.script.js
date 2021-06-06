@@ -597,7 +597,7 @@ function addToCart(){
         arrayCart.push(el.dataset.id, el.dataset.name, el.dataset.price);
 
         // setCookie();
-       
+       setCookie("cartProducts", cart, 100);
 
        console.log(cart);
        console.log(arrayCart);
@@ -625,7 +625,7 @@ function setCookie(cname, cvalue, exdays) {
   document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
 }
 
-setCookie("cartProducts", cart, 365);
+// setCookie("cartProducts", cart, 365);
 
 
 function readCookie (name) {
