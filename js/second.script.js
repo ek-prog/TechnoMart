@@ -631,7 +631,7 @@ function readCookie (name) {
 }
 readCookie("cart");
 
-
+console.log(cart);
 document.querySelector('.dropdown_cart').innerHTML = readCookie("cart");
 
 
