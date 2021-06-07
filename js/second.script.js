@@ -604,6 +604,7 @@ function addToCart(){
         // arrayCart.push(el.dataset.id, el.dataset.name, el.dataset.price);
 
         setCookie("cart", cart, 30);
+        console.log(cart);
     });
     });
 }
