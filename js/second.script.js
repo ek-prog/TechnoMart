@@ -39,7 +39,7 @@ function clickToggleNav(){
 let products = [
      {
         img: 'img/png/Perforator_1.png',
-        name: 'Перфоратор bosch <br> BFG 3000 ',
+        name: 'Перфоратор Bosch <br> BFG 3000 ',
         manufacturer: 'Bosch',
         connection: 'Аккумуляторные',
         price: 13950,
@@ -95,7 +95,7 @@ let products = [
     },
     {
         img: 'img/png/Perforator_4.png',
-        name: '<p>Перфоратор bosch <br> BFG 2000</p>',
+        name: '<p>Перфоратор Bosch <br> BFG 2000</p>',
         manufacturer: 'Bosch',
         connection: 'Аккумуляторные',
         price: 10300,
@@ -111,7 +111,7 @@ let products = [
     },
     {
         img: 'img/png/Perforator_1.png',
-        name: 'Перфоратор bosch <br> BFG 3000 ',
+        name: 'Перфоратор Bosch <br> BFG 3000 ',
         manufacturer: 'Bosch',
         connection: 'Аккумуляторные',
         price: 12352,
@@ -135,7 +135,7 @@ let products = [
     },
     {
         img: 'img/png/Perforator_1.png',
-        name: 'Перфоратор bosch <br> BFG 3000 ',
+        name: 'Перфоратор Bosch <br> BFG 3000 ',
         manufacturer: 'Bosch',
         connection: 'Сетевые',
         price: 13950,
@@ -267,7 +267,7 @@ function createProduct(product) {
         <p><span class="old_cost">${product.price}</span></p>
         <a class="popular_goods_price" href="#">${product.price}P.</a>
         <div class="add_popular_goods_second_str">
-            <button class="btn_popular_goods btn_popular_goods_first add_to_cart" data-id="${product.id}" data-name="${product.name}" data-price="${product.price}">Купить</button>
+            <button class="btn_popular_goods btn_popular_goods_first add_to_cart" data-id="${product.id}" data-img="${product.img}" data-name="${product.name}" data-price="${product.price}">Купить</button>
             <button class="btn_popular_goods btn_popular_goods_second">B закладки</button>
         </div>
     `;
@@ -557,20 +557,6 @@ document.querySelector('.button_second').onclick = function(){
 
 
 
-
-
-
-
-let buttonBuy = document.querySelectorAll('.add_to_cart');//кнопка купить
-let cart = {}; //корзина
-let cartObj; //для JSON
-let cookieBox; //для cookie
-let dropdownCart = document.querySelector('.dropdown_cart'); //всплывающая корзина
-let arrayCart = [];
-showCart();
-// console.log(products);
-
-
 // buttonBuy.forEach(el=>{
 //     el.addEventListener('click', function(){
 //      console.log(el.getAttribute('data-id')); 
@@ -582,27 +568,42 @@ showCart();
 
 
 
-// checkCart();
+let buttonBuy = document.querySelectorAll('.add_to_cart');//кнопка купить
+let cart = {}; //корзина
+let cartObj; //для JSON
+let cookieBox; //для cookie
+let dropdownCart = document.querySelector('.dropdown_cart'); //всплывающая корзина
+let arrayCart = [];
+
+
 
 function addToCart(){
     buttonBuy.forEach(el =>{
         el.addEventListener('click',event =>{
           let articul = el.dataset.id;
-        if(cart[articul] != undefined){
-            cart[articul]++;
-        }else{
-            cart[articul] = 1;
-        }
-
-       
-        arrayCart.push(el.dataset.id, el.dataset.name, el.dataset.price);
+        // if(cart[articul] != undefined){
+        //     cart[articul]++;
+        // }else{
+        //     cart[articul] = 1;
+        // }
+        let output = '';
+        output += '<div class="cart_block">';
+        output += '<button class="delete"></button>';
+        output += '<p class="cart_name">' +  el.dataset.id + '</p>';
+        output += ' <img class="cart_img" src="'+ el.dataset.img +'" аlt="Перфоратор">';
+        output += '<p class="cart_name">' +  el.dataset.name + '</p>';
+        output += '<div class="cart_quantity">';
+        output += '<button class="minus">-</button>';
+        // output += cart[articul];
+        output += '<button class="plus">+</button>';
+        output += '</div>';
+        output += '<p class="cart_price">' +  el.dataset.price + 'р'  + '</p>';;
+        output += '</div>';
+        output += '<hr class="hr_cart">';
+        document.querySelector('.dropdown_cart').innerHTML += output;
+        // arrayCart.push(el.dataset.id, el.dataset.name, el.dataset.price);
 
         setCookie("cart", cart, 30);
-       
-       console.log(cart);
-       console.log(arrayCart);
-       // document.querySelector('.dropdown_cart').innerHTML += el.getAttribute('data-name');
-        showCart();
     });
     });
 }
@@ -650,30 +651,30 @@ document.querySelector('.dropdown_cart').innerHTML = readCookie("cart");
 
 
 
-function showCart(){
-    // checkCart();
-    let output ='';
-    for(let key in cart){
-        console.log(cart)
-        // console.log(products[key].name);
-        output += '<div class="cart_block">';
-        output += '<button class="delete"></button>';
-        // output += ' <img class="cart_img" src="'+products[key].img+'" аlt="Перфоратор">';
-        output += '<p class="cart_name">' + arrayCart[1] + '</p>';
-        output += '<div class="cart_quantity">';
-        output += '<button class="minus">-</button>';
-        output += cart[key];
-        output += '<button class="plus">+</button>';
-        output += '</div>';
-        output += '<p class="cart_price">' +  arrayCart[2] + 'р'  + '</p>';;
-        output += '</div>';
-        output += '<hr class="hr_cart">';
-    }
+// function showCart(){
+//     // checkCart();
+//     let output ='';
+//     for(let key in cart){
+//         console.log(cart)
+//         // console.log(products[key].name);
+//         output += '<div class="cart_block">';
+//         output += '<button class="delete"></button>';
+//         // output += ' <img class="cart_img" src="'+products[key].img+'" аlt="Перфоратор">';
+//         output += '<p class="cart_name">' + arrayCart[1] + '</p>';
+//         output += '<div class="cart_quantity">';
+//         output += '<button class="minus">-</button>';
+//         output += cart[key];
+//         output += '<button class="plus">+</button>';
+//         output += '</div>';
+//         output += '<p class="cart_price">' +  arrayCart[2] + 'р'  + '</p>';;
+//         output += '</div>';
+//         output += '<hr class="hr_cart">';
+//     }
 
-    if(dropdownCart){document.querySelector('.dropdown_cart').innerHTML = output;}
-// checkTheOccupancy();
+//     if(dropdownCart){document.querySelector('.dropdown_cart').innerHTML = output;}
+// // checkTheOccupancy();
 
-}
+// }
 
 
 
