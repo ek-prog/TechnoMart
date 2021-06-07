@@ -596,7 +596,7 @@ function addToCart(){
 
         arrayCart.push(el.dataset.id, el.dataset.name, el.dataset.price);
 
-        setCookie("cart", cartObj, 30);
+        setCookie("cart", cart, 30);
        
        console.log(cart);
        console.log(arrayCart);
@@ -609,11 +609,11 @@ addToCart();
 
 
 function setCookie(cname, cvalue, exdays) {
-    cartObj = JSON.stringify(cart);
+   
   var d = new Date();
   d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
   var expires = "expires="+d.toUTCString();
-  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+  document.cookie = cname + "=" + JSON.stringify(cvalue) + ";" + expires + ";path=/";
 }
 
 function readCookie (name) {
