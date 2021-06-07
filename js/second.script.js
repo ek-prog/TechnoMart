@@ -580,7 +580,7 @@ let arrayCart = [];
 // })
 
 
-document.querySelector('.dropdown_cart').innerHTML = readCookie("cart");
+
 
 // checkCart();
 
@@ -593,16 +593,14 @@ function addToCart(){
         }else{
             cart[articul] = 1;
         }
-        
+
         arrayCart.push(el.dataset.id, el.dataset.name, el.dataset.price);
 
         setCookie();
        
-
        console.log(cart);
        console.log(arrayCart);
        // document.querySelector('.dropdown_cart').innerHTML += el.getAttribute('data-name');
-
         // showCart();
     });
     });
@@ -612,7 +610,8 @@ addToCart();
 function setCookie(){
     cartObj = JSON.stringify(cart);
     document.cookie = "cart=" + cartObj + "; expires=10/07/2021 00:00:00";
-    // console.log(cartObj);
+    console.log(cartObj);
+    console.log(JSON.parse(cartObj));
     
 }
 
@@ -631,24 +630,11 @@ function readCookie (name) {
 }
 // readCookie("cart");
 
-console.log(cart);
+
+document.querySelector('.dropdown_cart').innerHTML = readCookie("cart");
 
 
 
-// function checkTheOccupancy(){
-//     if(dropdownCart !== null){
-//        cartBox = document.createElement('a');
-//         cartBox.className = 'link_order';
-//         cartBox.textContent = 'Оформить заказ'
-//         dropdownCart.appendChild(cartBox);
-//      }else {
-//         dropdownCart.classList.add('empty_cart');
-//         document.querySelector('.dropdown_cart').textContent = 'Ваша корзина пуста';
-//         cartBox.style.display="none";
-
-//     } 
-// }
-// checkTheOccupancy();
 
 
 
@@ -689,6 +675,21 @@ console.log(cart);
 // }
 
 
+
+// function checkTheOccupancy(){
+//     if(dropdownCart !== null){
+//        cartBox = document.createElement('a');
+//         cartBox.className = 'link_order';
+//         cartBox.textContent = 'Оформить заказ'
+//         dropdownCart.appendChild(cartBox);
+//      }else {
+//         dropdownCart.classList.add('empty_cart');
+//         document.querySelector('.dropdown_cart').textContent = 'Ваша корзина пуста';
+//         cartBox.style.display="none";
+
+//     } 
+// }
+// checkTheOccupancy();
 
 
 
