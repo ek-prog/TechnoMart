@@ -581,11 +581,11 @@ function addToCart(){
     buttonBuy.forEach(el =>{
         el.addEventListener('click',event =>{
           let articul = el.dataset.id;
-        // if(cart[articul] != undefined){
-        //     cart[articul]++;
-        // }else{
-        //     cart[articul] = 1;
-        // }
+        if(cart[articul] != undefined){
+            cart[articul]++;
+        }else{
+            cart[articul] = 1;
+        }
         // let output = '';
         // output += '<div class="cart_block">';
         // output += '<button class="delete"></button>';
