@@ -567,7 +567,7 @@ let cartObj; //для JSON
 let cookieBox; //для cookie
 let dropdownCart = document.querySelector('.dropdown_cart'); //всплывающая корзина
 let arrayCart = [];
-// showCart();
+showCart();
 // console.log(products);
 
 
@@ -594,6 +594,7 @@ function addToCart(){
             cart[articul] = 1;
         }
 
+       
         arrayCart.push(el.dataset.id, el.dataset.name, el.dataset.price);
 
         setCookie("cart", cart, 30);
@@ -601,7 +602,7 @@ function addToCart(){
        console.log(cart);
        console.log(arrayCart);
        // document.querySelector('.dropdown_cart').innerHTML += el.getAttribute('data-name');
-        // showCart();
+        showCart();
     });
     });
 }
@@ -649,30 +650,30 @@ document.querySelector('.dropdown_cart').innerHTML = readCookie("cart");
 
 
 
-// function showCart(){
-//     // checkCart();
-//     let output ='';
-//     for(let key in cart){
-//         console.log(cart)
-//         // console.log(products[key].name);
-//         output += '<div class="cart_block">';
-//         output += '<button class="delete"></button>';
-//         output += ' <img class="cart_img" src="'+products[key].img+'" аlt="Перфоратор">';
-//         output += '<p class="cart_name">' + products[key].name + '</p>';
-//         output += '<div class="cart_quantity">';
-//         output += '<button class="minus">-</button>';
-//         output += cart[key];
-//         output += '<button class="plus">+</button>';
-//         output += '</div>';
-//         output += '<p class="cart_price">' + cart[key]*products[key].price + 'р'  + '</p>';;
-//         output += '</div>';
-//         output += '<hr class="hr_cart">';
-//     }
+function showCart(){
+    // checkCart();
+    let output ='';
+    for(let key in cart){
+        console.log(cart)
+        // console.log(products[key].name);
+        output += '<div class="cart_block">';
+        output += '<button class="delete"></button>';
+        // output += ' <img class="cart_img" src="'+products[key].img+'" аlt="Перфоратор">';
+        output += '<p class="cart_name">' + arrayCart[1] + '</p>';
+        output += '<div class="cart_quantity">';
+        output += '<button class="minus">-</button>';
+        output += cart[key];
+        output += '<button class="plus">+</button>';
+        output += '</div>';
+        output += '<p class="cart_price">' +  arrayCart[2] + 'р'  + '</p>';;
+        output += '</div>';
+        output += '<hr class="hr_cart">';
+    }
 
-//     if(dropdownCart){document.querySelector('.dropdown_cart').innerHTML = output;}
-// // checkTheOccupancy();
+    if(dropdownCart){document.querySelector('.dropdown_cart').innerHTML = output;}
+// checkTheOccupancy();
 
-// }
+}
 
 
 
