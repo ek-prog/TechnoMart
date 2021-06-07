@@ -580,7 +580,7 @@ let arrayCart = [];
 // })
 
 
-
+document.querySelector('.dropdown_cart').innerHTML = readCookie("cart");
 
 // checkCart();
 
@@ -629,10 +629,10 @@ function readCookie (name) {
     }
     return null;
 }
-readCookie("cart");
+// readCookie("cart");
 
 console.log(cart);
-document.querySelector('.dropdown_cart').innerHTML = readCookie("cart");
+
 
 
 // function checkTheOccupancy(){
