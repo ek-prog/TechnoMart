@@ -596,7 +596,7 @@ function addToCart(){
 
         arrayCart.push(el.dataset.id, el.dataset.name, el.dataset.price);
 
-        setCookie();
+        setCookie("cart", cart, 30);
        
        console.log(cart);
        console.log(arrayCart);
@@ -607,14 +607,13 @@ function addToCart(){
 }
 addToCart();
 
-function setCookie(){
-    cartObj = JSON.stringify(cart);
-    document.cookie = "cart=" + cartObj + "; expires=10/07/2021 00:00:00";
-    console.log(cartObj);
-    console.log(JSON.parse(cartObj));
-    
-}
 
+function setCookie(cname, cvalue, exdays) {
+  var d = new Date();
+  d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+  var expires = "expires="+d.toUTCString();
+  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
 
 function readCookie (name) {
     var searchName = name + '=';
