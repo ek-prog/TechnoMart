@@ -586,21 +586,21 @@ function addToCart(){
         // }else{
         //     cart[articul] = 1;
         // }
-        let output = '';
-        output += '<div class="cart_block">';
-        output += '<button class="delete"></button>';
-        output += '<p class="cart_name">' +  el.dataset.id + '</p>';
-        output += ' <img class="cart_img" src="'+ el.dataset.img +'" аlt="Перфоратор">';
-        output += '<p class="cart_name">' +  el.dataset.name + '</p>';
-        output += '<div class="cart_quantity">';
-        output += '<button class="minus">-</button>';
-        // output += cart[articul];
-        output += '<button class="plus">+</button>';
-        output += '</div>';
-        output += '<p class="cart_price">' +  el.dataset.price + 'р'  + '</p>';;
-        output += '</div>';
-        output += '<hr class="hr_cart">';
-        document.querySelector('.dropdown_cart').innerHTML += output;
+        // let output = '';
+        // output += '<div class="cart_block">';
+        // output += '<button class="delete"></button>';
+        // output += '<p class="cart_name">' +  el.dataset.id + '</p>';
+        // output += ' <img class="cart_img" src="'+ el.dataset.img +'" аlt="Перфоратор">';
+        // output += '<p class="cart_name">' +  el.dataset.name + '</p>';
+        // output += '<div class="cart_quantity">';
+        // output += '<button class="minus">-</button>';
+        // // output += cart[articul];
+        // output += '<button class="plus">+</button>';
+        // output += '</div>';
+        // output += '<p class="cart_price">' +  el.dataset.price + 'р'  + '</p>';;
+        // output += '</div>';
+        // output += '<hr class="hr_cart">';
+        // document.querySelector('.dropdown_cart').innerHTML += output;
         // arrayCart.push(el.dataset.id, el.dataset.name, el.dataset.price);
 
         setCookie("cart", cart, 30);
@@ -611,7 +611,6 @@ addToCart();
 
 
 function setCookie(cname, cvalue, exdays) {
-   
   var d = new Date();
   d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
   var expires = "expires="+d.toUTCString();
