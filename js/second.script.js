@@ -587,7 +587,9 @@ function addToCart(){
             cart[articul] = 1;
         }
 
-
+   dropdownCart.remove(cartBoxEmpty);
+   dropdownCart.remove(cartBox);
+   dropdownCart.remove(emptyCart);
         let output = '';
         output += '<div class="cart_block">';
         output += '<button class="delete"></button>';
@@ -655,9 +657,6 @@ if(document.cookie == ''){
 
 }
 else{
-   dropdownCart.remove(cartBoxEmpty);
-   dropdownCart.remove(cartBox);
-   dropdownCart.remove(emptyCart);
    dropdownCart.innerHTML = getCookie("cart");
    
 }
