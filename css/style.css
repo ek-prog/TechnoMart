@@ -214,13 +214,22 @@ input.search::placeholder{
 }
 .text_cart{
     position: absolute;
-    top: 104px;
+    top: 86px;
     text-align: center;
-    right: 55px;
+    right: 51px;
     font-size: 17px;
     width: 87px;
+    color: #32425c;
+    font-weight: bold;
 }
-
+	.text_cart_empty{
+    position: absolute;
+    top: 43px;
+    right: 35px;
+    font-size: 21px;
+    color: #ee3643;
+    font-weight: bold;
+}
 
 /*ВТОРАЯ ЛИНИЯ В ШАПКЕ*/
 
@@ -1572,11 +1581,13 @@ ul.breadcrumbs li+li:before {
     cursor: pointer;
 }
 .cart_img{
-    width: 130px;
-    height: 100px;
+    width: 193px;
+    height: 144px;
+    margin: 0 auto;
 }
 .cart_name{
-    margin-top: 25px;
+    text-align: center;
+    font-weight: bold;
 }
 .cart_price{
     width: 50%;
@@ -1603,10 +1614,12 @@ ul.breadcrumbs li+li:before {
     height: 21px;
     outline: none;
     cursor: pointer;
-    margin-top: 45px;
+    /* margin-top: 0px; */
+    position: absolute;
+    top: 55px;
 }
 .cart_block{
-	display: flex;
+	/*display: flex;*/
     flex-wrap: wrap;
 }
 .minus,.plus{

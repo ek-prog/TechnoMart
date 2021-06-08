@@ -586,7 +586,7 @@ function addToCart(){
         }else{
             cart[articul] = 1;
         }
-        dropdownCart.textContent = '';
+        // dropdownCart.textContent = '';
         let output = '';
         output += '<div class="cart_block">';
         output += '<button class="delete"></button>';
@@ -652,7 +652,7 @@ if(document.cookie == ''){
 
 }
 else{
-    
+    dropdownCart.textContent = '';
     dropdownCart.innerHTML = getCookie("cart");
    
 }
