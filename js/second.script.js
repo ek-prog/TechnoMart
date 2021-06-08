@@ -638,6 +638,7 @@ if(cartCookie == ''){
 }
 else{
    dropdownCart.innerHTML = getCookie("cart");
+   console.log('Ты что то делаешь не так))))))');
 }
 
 
