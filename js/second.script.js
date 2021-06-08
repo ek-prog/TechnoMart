@@ -633,12 +633,12 @@ function getCookie (name) {
 // getCookie("cart");
 
 let cartCookie = getCookie("cart");
-if(cartCookie == ''){
+if(cartCookie != ''){
      dropdownCart.textContent = 'Ваша корзина пуста';
 }
 else{
    dropdownCart.innerHTML = getCookie("cart");
-   console.log('Ты что то делаешь не так))))))');
+   console.log('Ты что то делаешь не так, sorry))))))');
 }
 
 
