@@ -212,9 +212,13 @@ input.search::placeholder{
 	
 
 }
-.empty_cart{
-	height: 200px;
-	width: 200px;
+.text_cart{
+    position: absolute;
+    top: 104px;
+    text-align: center;
+    right: 55px;
+    font-size: 17px;
+    width: 87px;
 }
 
 

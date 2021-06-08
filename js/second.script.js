@@ -635,11 +635,17 @@ function getCookie (name) {
 
 let cartCookie = getCookie("cart");
 if(document.cookie == ''){
-    dropdownCart.textContent = 'Корзина пуста';
+
+    cartBoxEmpty = document.createElement('p');
+    cartBoxEmpty.className = 'text_cart_empty';
+    cartBoxEmpty.textContent = 'Корзина пуста';
+    dropdownCart.appendChild(cartBoxEmpty);
+
     cartBox = document.createElement('p');
     cartBox.className = 'text_cart';
     cartBox.textContent = 'Самое время что-то купить'
     dropdownCart.appendChild(cartBox);
+    
     let emptyCart = document.createElement ("IMG");
     emptyCart.setAttribute ("src", "img/jpg/empty_cart_man1.jpg");
     dropdownCart.appendChild(emptyCart);
