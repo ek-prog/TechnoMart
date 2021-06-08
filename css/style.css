@@ -209,6 +209,7 @@ input.search::placeholder{
 	background-color: #fff;
 	width: 65%;
 	z-index: 2;
+	box-shadow: 0 11px 33px rgb(0 0 0 / 75%);
 	
 
 }
@@ -1615,8 +1616,8 @@ ul.breadcrumbs li+li:before {
     outline: none;
     cursor: pointer;
     /* margin-top: 0px; */
-    position: absolute;
-    top: 55px;
+/*    position: absolute;
+    top: 55px;*/
 }
 .cart_block{
 	/*display: flex;*/
