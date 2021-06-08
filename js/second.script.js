@@ -586,6 +586,7 @@ function addToCart(){
         }else{
             cart[articul] = 1;
         }
+        dropdownCart.textContent = 'Корзина';
         let output = '';
         output += '<div class="cart_block">';
         output += '<button class="delete"></button>';
