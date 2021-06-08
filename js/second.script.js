@@ -586,7 +586,10 @@ function addToCart(){
         }else{
             cart[articul] = 1;
         }
-        // dropdownCart.textContent = '';
+         dropdownCart.remove(cartBoxEmpty);
+         dropdownCart.remove(cartBox);
+         dropdownCart.remove(emptyCart);
+
         let output = '';
         output += '<div class="cart_block">';
         output += '<button class="delete"></button>';
@@ -645,14 +648,13 @@ if(document.cookie == ''){
     cartBox.className = 'text_cart';
     cartBox.textContent = 'Самое время что-то купить'
     dropdownCart.appendChild(cartBox);
-    
+
     let emptyCart = document.createElement ("IMG");
     emptyCart.setAttribute ("src", "img/jpg/empty_cart_man1.jpg");
     dropdownCart.appendChild(emptyCart);
 
 }
 else{
-    dropdownCart.textContent = '';
     dropdownCart.innerHTML = getCookie("cart");
    
 }
