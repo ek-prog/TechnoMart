@@ -587,9 +587,7 @@ function addToCart(){
             cart[articul] = 1;
         }
 
-   dropdownCart.remove(cartBoxEmpty);
-   dropdownCart.remove(cartBox);
-   dropdownCart.remove(emptyCart);
+
         let output = '';
         output += '<div class="cart_block">';
         output += '<button class="delete"></button>';
@@ -637,27 +635,25 @@ function getCookie (name) {
 // getCookie("cart");
 
 let cartCookie = getCookie("cart");
-let cartBoxEmpty;
-let cartBox;
-let emptyCart;
 if(document.cookie == ''){
-    cartBoxEmpty = document.createElement('p');
+    let cartBoxEmpty = document.createElement('p');
     cartBoxEmpty.className = 'text_cart_empty';
     cartBoxEmpty.textContent = 'Корзина пуста';
     dropdownCart.appendChild(cartBoxEmpty);
 
-    cartBox = document.createElement('p');
+    let cartBox = document.createElement('p');
     cartBox.className = 'text_cart';
     cartBox.textContent = 'Самое время что-то купить'
     dropdownCart.appendChild(cartBox);
 
-    emptyCart = document.createElement ("IMG");
+    let emptyCart = document.createElement ("IMG");
     emptyCart.setAttribute ("src", "img/jpg/empty_cart_man1.jpg");
     dropdownCart.appendChild(emptyCart);
 
 }
 else{
    dropdownCart.innerHTML = getCookie("cart");
+   console.log('good job!');
    
 }
 
