@@ -600,8 +600,8 @@ function addToCart(){
         output += '<p class="cart_price">' +  el.dataset.price + 'р'  + '</p>';;
         output += '</div>';
         output += '<hr class="hr_cart">';
-        document.querySelector('.dropdown_cart').innerHTML += output;
-        arrayCart.push(el.dataset.id, el.dataset.name, el.dataset.price);
+        dropdownCart.innerHTML += output;
+        // arrayCart.push(el.dataset.id, el.dataset.name, el.dataset.price);
 
         setCookie("cart", cart, 30);
         console.log(cart);
@@ -618,7 +618,7 @@ function setCookie(cname, cvalue, exdays) {
   document.cookie = cname + "=" + JSON.stringify(cvalue) + ";" + expires + ";path=/";
 }
 
-function readCookie (name) {
+function getCookie (name) {
     var searchName = name + '=';
     var cookies = document.cookie.split(';');
     for(var i=0; i < cookies.length; i++) {
@@ -630,10 +630,15 @@ function readCookie (name) {
     }
     return null;
 }
-// readCookie("cart");
+// getCookie("cart");
 
-
-document.querySelector('.dropdown_cart').innerHTML = readCookie("cart");
+let cartCookie = getCookie("cart");
+if(cartCookie != ''){
+    dropdownCart.innerHTML = getCookie("cart");
+}
+else{
+    dropdownCart.textContent = 'Ваша корзина пуста';
+}
 
 
 
