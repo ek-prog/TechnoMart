@@ -634,11 +634,11 @@ function getCookie (name) {
 
 let cartCookie = getCookie("cart");
 if(document.cookie == ''){
-    console.log('корзина пуста')
+    dropdownCart.textContent = 'корзина пуста';
 }
 else{
    dropdownCart.innerHTML = getCookie("cart");
-   console.log('Ты что то делаешь не так, sorry man))))))');
+   
 }
 
 
